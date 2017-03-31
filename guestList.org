@@ -1,0 +1,287 @@
+#+TITLE: List of potential guests for the Dagstuhl's workshop on Parameterized Complexity and Compression 
+#+DESCRIPTION:
+#+AUTHOR: Jérémy Barbay
+#+CATEGORY: 
+
+Note: If adding name, add them in the .org file, so that it can be easily exported to both csv and latex.
+DO NOT ADD THE NAME IN THE LATEX FILE.
+
+* votes 
+
+| nb Votes | Jeremy | Travis | Simon | Stefan | First Name  | Last Name        | Institution                          | Country     | Email                              | Homepage                                                             | Area      | phD year | Gender |
+|----------+--------+--------+-------+--------+-------------+------------------+--------------------------------------+-------------+------------------------------------+----------------------------------------------------------------------+-----------+----------+--------|
+|        1 |      1 |        |       |        | Jeremy      | Barbay           | University of Chile                  | Chile       | jeremy@barbay.cl                   | http://users.dcc.uchile.cl/~jbarbay/                                 | Algo+Data |          | man    |
+|        1 |      1 |        |       |        | Travis      | Gagie            | University of Helsinki               | Finland     | travis.gagie@gmail.com             | http://www.cs.helsinki.fi/u/gagie/                                   | Data      |          | man    |
+|        1 |      1 |        |       |        | Simon       | Gog              | Karlsruhe Institute of Technology    | Germany     | simon.gog@googlemail.com           |                                                                      | Data      |          | man    |
+|        1 |      1 |        |       |        | Stefan      | Kratsch          | University of Bonn                   | Germany     | kratsch@cs.uni-bonn.de             | http://www.i1.informatik.uni-bonn.de/doku.php?id=staff:stefankratsch | Algo      | >5y ago  | man    |
+|        0 |        |        |       |        | Daniel      | Marx             | Hungarian Academy of Sciences        | Hungary     | dmarx@cs.bme.hu                    | http://www.cs.bme.hu/~dmarx/                                         | Algo      | >5y ago  | man    |
+|        0 |        |        |       |        | Michal      | Pilipczuk        | University of Warsaw                 | Poland      | michal.pilipczuk@mimuw.edu.pl      | http://www.mimuw.edu.pl/~mp248287/index.html                         | Algo      | 2013     | man    |
+|        0 |        |        |       |        | Marek       | Cygan            | University of Warsaw                 | Poland      | cygan@mimuw.edu.pl                 | http://www.mimuw.edu.pl/~cygan/                                      | Algo      | 2012     | man    |
+|        0 |        |        |       |        | Daniel      | Lokshtanov       | University of Bergen                 | Norway      | daniello@ii.uib.no                 | http://www.ii.uib.no/~daniello/                                      | Algo      | >5y ago  | man    |
+|        0 |        |        |       |        | Gerhard     | Woeginger        | Eindhoven University of Technology   | Netherlands | g.woeginger@tue.nl                 | http://www.win.tue.nl/~gwoegi/                                       | Algo      | >5y ago  | man    |
+|        0 |        |        |       |        | Fedor V.    | Fomin            | University of Bergen                 | Norway      | fomin@ii.uib.no                    | http://www.ii.uib.no/~fomin/                                         | Algo      | >5y ago  | man    |
+|        0 |        |        |       |        | Bart M. P.  | Jansen           | Eindhoven University of Technology   | Netherlands | b.m.p.jansen@tue.nl                | http://www.win.tue.nl/~bjansen/                                      | Algo      | 2013     | man    |
+|        0 |        |        |       |        | Neeldhara   | Misra            | IIT Gandhinagar                      | India       | neeldhara.misra@gmail.com          | http://neeldhara.com/                                                | Algo      | 2012     | woman  |
+|        0 |        |        |       |        | Marcin      | Pilipczuk        | University of Warwick                | England     | malcin@mimuw.edu.pl                | http://www.mimuw.edu.pl/~malcin/                                     | Algo      | 2012     | woman  |
+|        0 |        |        |       |        | Saket       | Saurabh          | Inst. of Math. Sciences Chennai      | India       | saket@imsc.res.in                  | www.imsc.res.in/~saket/                                              | Algo      | >5y ago  | man    |
+|        0 |        |        |       |        | Petteri     | Kaski            | Aalto University                     | Finland     | petteri.kaski@aalto.fi             | http://users.ics.aalto.fi/pkaski/                                    | Algo      | >5y ago  | man    |
+|        0 |        |        |       |        | Holger      | Dell             | Saarland University                  | Germany     | hdell@mmci.uni-saarland.de         | http://www.holgerdell.com                                            | Algo      | 2011     | man    |
+|        0 |        |        |       |        | Archontia   | C. Giannopoulou  |                                      |             |                                    |                                                                      | Algo      | 2012     | woman  |
+|        0 |        |        |       |        | Danny       | Hermelin         | Ben-Gurion University                | Israel      | hermelin@bgu.ac.il                 |                                                                      | Algo      | >5y ago  | man    |
+|        0 |        |        |       |        | Mike        | Fellows          | Charles Darwin Univerisy             | Australia   | michael.fellows@cdu.edu.au         | http://www.cdu.edu.au/engit/staff-profiles/michael-fellows           | Algo      | >5y ago  | man    |
+|        0 |        |        |       |        | Frances     | Rosamond         | Charles Darwin University            | Australia   | frances.rosamond@cdu.edu.au        | http://www.cdu.edu.au/engit/staff-profiles/frances-rosamond          | Algo      | >5y ago  | woman  |
+|        1 |      1 |        |       |        | Srinivas    | Rao              | Seoul National University            | Korea       | ssrao10@gmail.com                  |                                                                      | data      | >5y ago  | man    |
+|        0 |        |        |       |        | Benjamin    | Sach             | University of Bristol                |             |                                    |                                                                      | Algo+Data |          | man    |
+|        0 |        |        |       |        | Sebastian   | Maneth           | University of Edinburgh              | England     | smaneth@inf.ed.ac.uk               | http://homepages.inf.ed.ac.uk/smaneth                                | Data      |          | man    |
+|        0 |        |        |       |        | Sabrina     | Mantaci          |                                      |             |                                    |                                                                      |           |          | woman  |
+|        0 |        |        |       |        | Giovanna    | Rosone           | University of Pisa                   | Italy       | giovanna.rosone@unipi.it           | http://di.unipi.it/~rosone                                           | Data      |          | woman  |
+|        0 |        |        |       |        | Marinella   | Sciortino        |                                      |             |                                    |                                                                      | Data      | 2010     | woman  |
+|        0 |        |        |       |        | Pawel       | Gawrychowski     | University of Wrocław                | Poland      | gawry@cs.uni.wroc.pl               | https://sites.google.com/a/cs.uni.wroc.pl/gawry                      | Data      | 2011     | man    |
+|        0 |        |        |       |        | Susana      | Ladra            | Universidad de Corunia               | Spain       | sladra@udc.es                      | http://lbd.udc.es/ShowResearcherInformation.do?id=113                | Data      | 2011     | woman  |
+|        0 |        |        |       |        | Jouni       | Siren            | Sanger Institute                     | England     | jouni.siren@sanger.ac.uk           | http://jltsiren.kapsi.fi                                             | Data      | 2012     | man    |
+|        1 |      1 |        |       |        | Tatiana     | Starikovskaya    | University of Bristol                | England     | tat.starikovskaya@gmail.com        | http://starikovskaya.com                                             | Algo+Data | 2012     | woman  |
+|        0 |        |        |       |        | Djamal      | Belazzougui      |                                      | Algeria     |                                    |                                                                      | Data      | 201?     | man    |
+|        0 |        |        |       |        | Markus      | Lohrey           | University of Siegen                 | Germany     | lohrey@eti.uni-siegen.de           | http://www.eti.uni-siegen.de/ti/mitarbeiter/lohrey                   | Algo+Data | >5y ago  | man    |
+|        0 |        |        |       |        | Raimund     | Seidel           | Saarland University                  | Germany     | rseidel@cs.uni-saarland.de         |                                                                      | Algo      | >5y ago  | man    |
+|        0 |        |        |       |        | Stephane    | Durocher         | University of Manitoba               | Canada      | durocher@cs.umanitoba.ca           |                                                                      | Algo+Data | >5y ago  | man    |
+|        0 |        |        |       |        | Alejandro   | Lopez Ortiz      | University of Waterloo               | Canada      | alopez-o@uwaterloo.ca              |                                                                      | Algo      | >5y ago  | man    |
+|        0 |        |        |       |        | Luca        | Castelli Aleardi | \'Ecole Polytechnique de Paris       | France      | amturing@lix.polytechnique.fr      |                                                                      | Algo+Data | >5y ago  | man    |
+|        0 |        |        |       |        | David G.    | Kirkpatrick      | University of British Columbia       | Canada      |                                    |                                                                      | Algo      | >5y ago  | man    |
+|        0 |        |        |       |        | Kurt        | Mehlhorn         | Max-Planck-Institut f\"ur Informatik | Germany     | mehlhorn@mpi-inf.mpg.de            | https://www.mpi-inf.mpg.de/~mehlhorn                                 | Algo+Data | >5y ago  | man    |
+|        0 |        |        |       |        | Gonzalo     | Navarro          | Universidad de Chile                 | Chile       | gnavarro@dcc.uchile.cl             |                                                                      | Algo+Data | >5y ago  | man    |
+|        0 |        |        |       |        | J. Ian      | Munro            | University of Waterloo               | Canada      | imunro@uwaterloo.ca                | https://cs.uwaterloo.ca/~imunro                                      | Algo+Data | >5y ago  | man    |
+|        0 |        |        |       |        | Paolo       | Ferragina        | Univerisy of Pisa                    | Italy       | ferragina@di.unipi.it              | http://www.di.unipi.it/~ferragin                                     | Algo+Data | >5y ago  | man    |
+|        0 |        |        |       |        | Roberto     | Grossi           | Univerisy of Pisa                    | Italy       | grossi@di.unipi.it                 | http://www.di.unipi.it/~grossi                                       | Algo+Data | >5y ago  | man    |
+|        0 |        |        |       |        | Johannes    | Fischer          | Dortmund University                  | Germany     | johannes.fischer@cs.tu-dortmund.de | https://ls11-www.cs.uni-dortmund.de/staff/fischer                    | Data      | >5y ago  | man    |
+|        0 |        |        |       |        | Diego       | Seco             | Universidad de Concepcion            | Chile       | dseco@udec.cl                      |                                                                      | Data      | >5y ago  | man    |
+|        0 |        |        |       |        | Philip      | Bille            | Technical University of Denmark      | Denmark     | phbi@dtu.dk                        | http://www.compute.dtu.dk/~phbi                                      | Data      | >5y ago  | man    |
+|        0 |        |        |       |        | Rajeev      | Raman            | University of Leicester              | England     | r.raman@leicester.ac.uk            | http://www.cs.le.ac.uk/people/rraman                                 | Data      | >5y ago  | man    |
+|        0 |        |        |       |        | Rossano     | Venturini        | University of Pisa                   | Italy       | rossano.venturini@unipi.it         | http://zola.di.unipi.it/rossano/                                     | Data      | >5y ago  | man    |
+|        0 |        |        |       |        | Giovanni    | Manzini          | University of Piemonte Orientale     | Italy       | manzini@mfn.unipmn.it              | http://people.unipmn.it/manzini/                                     | Data      | >5y ago  | man    |
+|        0 |        |        |       |        | Hideo       | Bannai           | Kyushu University                    | Japan       | bannai@inf.kyushu-u.ac.jp          | http://www.i.kyushu-u.ac.jp/~bannai                                  | Data      | >5y ago  | man    |
+|        0 |        |        |       |        | Simon       | Puglisi          | University of Helsinki               | Finland     | puglisi@cs.helsinki.fi             | http://www.cs.helsinki.fi/u/puglisi                                  | Data      | >5y ago  | man    |
+|        0 |        |        |       |        | Yakov       | Nekrich          | University of Waterloo               | Canada      | ynekrich@uwaterloo.ca              | https://cs.uwaterloo.ca/~ynekrich                                    | Data      | >5y ago  | man    |
+|        0 |        |        |       |        | Shunsuke    | Inenaga          | Kyushu University                    | Japan       | inenaga@inf.kyushu-u.ac.jp         | http://str.i.kyushu-u.ac.jp/~inenaga                                 | Data      | >5y ago  | man    |
+|        0 |        |        |       |        | Inge        | Li Gortz         | Technical University of Denmark      | Denmark     | inge@dtu.dk                        | http://www.imm.dtu.dk/~inge                                          | Data      | >5y ago  | woman  |
+|        0 |        |        |       |        | Zsuzsanna   | Liptak           | University of Verona                 | Italy       | zsuzsanna.liptak@univr.it          | http://profs.scienze.univr.it/~liptak                                | Data      | >5y ago  | woman  |
+|        0 |        |        |       |        | Nieves      | Brisaboa         | Universidad de Corunia               | Spain       | risaboa@udc.es                     | http://lbd.udc.es/ShowResearcherInformation.do?id=12                 | Data      | >5y ago  | woman  |
+|        0 |        |        |       |        | Paola       | Bonizzoni        | University of Milano                 | Italy       | bonizzoni@disco.unimib.it          | http://algolab.eu/people/bonizzoni                                   | Data      | >5y ago  | woman  |
+|        0 |        |        |       |        | Rolf        | Klein            | University of Bonn                   | Germany     | rolf.klein@uni-bonn.de             | http://tizian.cs.uni-bonn.de/staff/klein.html                        | Algo      | >5y ago  | man    |
+|        0 |        |        |       |        | Lene Monrad | Favrholdt        | University of Southern Denmark       | Denmark     |                                    |                                                                      | Algo      | >5y ago  | woman  |
+|        0 |        |        |       |        | Javiel      | Rojas            |                                      | Chile       | jrojas@dcc.uchile.cl               |                                                                      | Algo      | soon     | man    |
+|        0 |        |        |       |        | Carlos      | Ochoa            |                                      | Chile       | cochoa@dcc.uchile.cl               |                                                                      | Algo      | soon     | man    |
+|        0 |        |        |       |        |             |                  |                                      |             |                                    |                                                                      |           |          |        |
+|        0 |        |        |       |        | Vladimir    | Estivill-Castro  | Griffith University                  | Australia   |                                    |                                                                      | Algo      | >5y ago  | man    |
+|        0 |        |        |       |        | Rolf        | Niedermeier      | TU Berlin                            | Germany     | rolf.niedermeier@tu-berlin.de      | http://www.akt.tu-berlin.de/menue/team/niedermeier-rolf              | Algo      | >5y ago  | man    |
+|        0 |        |        |       |        | Marek       | Karpinsky        | University of Bonn                   | Germany     | marek@cs.uni-bonn.de               | http://theory.cs.uni-bonn.de/~marek                                  | Algo+Data | >5y ago  | man    |
+|        0 |        |        |       |        | Eunjung     | Kim              |                                      |             |                                    |                                                                      | Algo      | >5y ago  | woman  |
+|        0 |        |        |       |        | Anna        | Adamaszek        |                                      |             |                                    |                                                                      |           |          | woman  |
+|        0 |        |        |       |        | Cristina    | Bazgan           | University Paris Dauphine            | France      | bazgan@lamsade.dauphine.fr         |                                                                      | Algo      | >5y ago  | woman  |
+|        0 |        |        |       |        | Glencora    | Borradaile       | Oregon State University              | USA         | glencora@eecs.oregonstate.edu      |                                                                      | Algo      | >5y ago  | woman  |
+|----------+--------+--------+-------+--------+-------------+------------------+--------------------------------------+-------------+------------------------------------+----------------------------------------------------------------------+-----------+----------+--------|
+|          |      7 |      0 |     0 |      0 |             |                  |                                      |             |                                    |                                                                      |           |          |        |
+|----------+--------+--------+-------+--------+-------------+------------------+--------------------------------------+-------------+------------------------------------+----------------------------------------------------------------------+-----------+----------+--------|
+#+TBLFM: $1=$2+$3+$4+$5
+#+TBLFM: @>$2=vsum(@2..@-1)
+#+TBLFM: @>$3=vsum(@2..@-1)
+#+TBLFM: @>$4=vsum(@2..@-1)
+#+TBLFM: @>$5=vsum(@2..@-1)
+
+* List
+
+
+| First Name  | Last Name        | Institution                              | Country     | Email                              | Homepage                                                             | Area      | phD year | Gender |
+|-------------+------------------+------------------------------------------+-------------+------------------------------------+----------------------------------------------------------------------+-----------+----------+--------|
+| Jeremy      | Barbay           | University of Chile                      | Chile       | jeremy@barbay.cl                   | http://users.dcc.uchile.cl/~jbarbay/                                 | Algo+Data |          | man    |
+| Travis      | Gagie            | University of Helsinki                   | Finland     | travis.gagie@gmail.com             | http://www.cs.helsinki.fi/u/gagie/                                   | Data      |          | man    |
+| Simon       | Gog              | Karlsruhe Institute of Technology        | Germany     | simon.gog@googlemail.com           |                                                                      | Data      |          | man    |
+| Stefan      | Kratsch          | University of Bonn                       | Germany     | kratsch@cs.uni-bonn.de             | http://www.i1.informatik.uni-bonn.de/doku.php?id=staff:stefankratsch | Algo      | >5y ago  | man    |
+| Daniel      | Marx             | Hungarian Academy of Sciences            | Hungary     | dmarx@cs.bme.hu                    | http://www.cs.bme.hu/~dmarx/                                         | Algo      | >5y ago  | man    |
+| Michal      | Pilipczuk        | University of Warsaw                     | Poland      | michal.pilipczuk@mimuw.edu.pl      | http://www.mimuw.edu.pl/~mp248287/index.html                         | Algo      | 2013     | man    |
+| Marek       | Cygan            | University of Warsaw                     | Poland      | cygan@mimuw.edu.pl                 | http://www.mimuw.edu.pl/~cygan/                                      | Algo      | 2012     | man    |
+| Daniel      | Lokshtanov       | University of Bergen                     | Norway      | daniello@ii.uib.no                 | http://www.ii.uib.no/~daniello/                                      | Algo      | >5y ago  | man    |
+| Gerhard     | Woeginger        | Eindhoven University of Technology       | Netherlands | g.woeginger@tue.nl                 | http://www.win.tue.nl/~gwoegi/                                       | Algo      | >5y ago  | man    |
+| Fedor V.    | Fomin            | University of Bergen                     | Norway      | fomin@ii.uib.no                    | http://www.ii.uib.no/~fomin/                                         | Algo      | >5y ago  | man    |
+| Bart M. P.  | Jansen           | Eindhoven University of Technology       | Netherlands | b.m.p.jansen@tue.nl                | http://www.win.tue.nl/~bjansen/                                      | Algo      | 2013     | man    |
+| Neeldhara   | Misra            | IIT Gandhinagar                          | India       | neeldhara.misra@gmail.com          | http://neeldhara.com/                                                | Algo      | 2012     | woman  |
+| Marcin      | Pilipczuk        | University of Warwick                    | England     | malcin@mimuw.edu.pl                | http://www.mimuw.edu.pl/~malcin/                                     | Algo      | 2012     | man    |
+| Saket       | Saurabh          | Inst. of Math. Sciences Chennai          | India       | saket@imsc.res.in                  | www.imsc.res.in/~saket/                                              | Algo      | >5y ago  | man    |
+| Petteri     | Kaski            | Aalto University                         | Finland     | petteri.kaski@aalto.fi             | http://users.ics.aalto.fi/pkaski/                                    | Algo      | >5y ago  | man    |
+| Holger      | Dell             | Saarland University                      | Germany     | hdell@mmci.uni-saarland.de         | http://www.holgerdell.com                                            | Algo      | 2011     | man    |
+| Karl        | Bringmann        | ETH Zürich                               | Switzerland | karl.bringmann@inf.ethz.ch         | http://www.cadmo.ethz.ch/as/people/members/karlb/index               | Algo      | 2014     | man    |
+| Fabrizio    | Grandoni         | Karlsruhe Institute of Technology        | Switzerland | fabrizio@idsia.ch                  | http://people.idsia.ch/~grandoni/                                    | Algo      | >5y ago  | man    |
+| Virginia    | V. Williams      | Stanford                                 | USA         | virgi@cs.stanford.edu              | http://theory.stanford.edu/~virgi/                                   | Algo      | >5y ago  | woman  |
+| Archontia   | C. Giannopoulou  |                                          |             |                                    |                                                                      | Algo      | 2012     | woman  |
+| Christian   | Knauer           | University of Bayreuth                   | Germany     | christian.knauer@uni-bayreuth.de   | http://www.ai6.uni-bayreuth.de/en/members/christian-knauer-en.html   | Algo      | >5y ago  | man    |
+| Danny       | Hermelin         | Ben-Gurion University                    | Israel      | hermelin@bgu.ac.il                 |                                                                      | Algo      | >5y ago  | man    |
+| Mike        | Fellows          | Charles Darwin Univerisy                 | Australia   | michael.fellows@cdu.edu.au         | http://www.cdu.edu.au/engit/staff-profiles/michael-fellows           | Algo      | >5y ago  | man    |
+| Frances     | Rosamond         | Charles Darwin University                | Australia   | frances.rosamond@cdu.edu.au        | http://www.cdu.edu.au/engit/staff-profiles/frances-rosamond          | Algo      | >5y ago  | woman  |
+| Srinivas    | Rao              | Seoul National University                | Korea       | ssrao10@gmail.com                  |                                                                      | data      | >5y ago  | man    |
+| Benjamin    | Sach             | University of Bristol                    |             |                                    |                                                                      | Algo+Data |          | man    |
+| Sebastian   | Maneth           | University of Edinburgh                  | England     | smaneth@inf.ed.ac.uk               | http://homepages.inf.ed.ac.uk/smaneth                                | Data      |          | man    |
+| Sabrina     | Mantaci          |                                          |             |                                    |                                                                      |           |          | woman  |
+| Giovanna    | Rosone           | University of Pisa                       | Italy       | giovanna.rosone@unipi.it           | http://di.unipi.it/~rosone                                           | Data      |          | woman  |
+| Marinella   | Sciortino        |                                          |             |                                    |                                                                      | Data      | 2010     | woman  |
+| Pawel       | Gawrychowski     | University of Wrocław                    | Poland      | gawry@cs.uni.wroc.pl               | https://sites.google.com/a/cs.uni.wroc.pl/gawry                      | Data      | 2011     | man    |
+| Susana      | Ladra            | Universidad de Corunia                   | Spain       | sladra@udc.es                      | http://lbd.udc.es/ShowResearcherInformation.do?id=113                | Data      | 2011     | woman  |
+| Jouni       | Siren            | Sanger Institute                         | England     | jouni.siren@sanger.ac.uk           | http://jltsiren.kapsi.fi                                             | Data      | 2012     | man    |
+| Tatiana     | Starikovskaya    | University of Bristol                    | England     | tat.starikovskaya@gmail.com        | http://starikovskaya.com                                             | Algo+Data | 2012     | woman  |
+| Allyx       | Fontaine         | University of Bristol                    | England     | allyx.fontaine@bristol.ac.uk       |                                                                      | Algo      | 2014     | woman  |
+| Cecilia     | Hernandez        | Universidad de Concepcion                | Chile       | chernand@gmail.com                 | http://www.inf.udec.cl/~chernand                                     | Algo+Data | 2015     | woman  |
+| Djamal      | Belazzougui      |                                          | Algeria     |                                    |                                                                      | Data      | 201?     | man    |
+| Markus      | Lohrey           | University of Siegen                     | Germany     | lohrey@eti.uni-siegen.de           | http://www.eti.uni-siegen.de/ti/mitarbeiter/lohrey                   | Algo+Data | >5y ago  | man    |
+| Raimund     | Seidel           | Saarland University                      | Germany     | rseidel@cs.uni-saarland.de         |                                                                      | Algo      | >5y ago  | man    |
+| Stephane    | Durocher         | University of Manitoba                   | Canada      | durocher@cs.umanitoba.ca           |                                                                      | Algo+Data | >5y ago  | man    |
+| Alejandro   | Lopez Ortiz      | University of Waterloo                   | Canada      | alopez-o@uwaterloo.ca              |                                                                      | Algo      | >5y ago  | man    |
+| Luca        | Castelli Aleardi | \'Ecole Polytechnique de Paris           | France      | amturing@lix.polytechnique.fr      |                                                                      | Algo+Data | >5y ago  | man    |
+| David G.    | Kirkpatrick      | University of British Columbia           | Canada      |                                    |                                                                      | Algo      | >5y ago  | man    |
+| Kurt        | Mehlhorn         | Max-Planck-Institut f\"ur Informatik     | Germany     | mehlhorn@mpi-inf.mpg.de            | https://www.mpi-inf.mpg.de/~mehlhorn                                 | Algo+Data | >5y ago  | man    |
+| Gonzalo     | Navarro          | Universidad de Chile                     | Chile       | gnavarro@dcc.uchile.cl             |                                                                      | Algo+Data | >5y ago  | man    |
+| J. Ian      | Munro            | University of Waterloo                   | Canada      | imunro@uwaterloo.ca                | https://cs.uwaterloo.ca/~imunro                                      | Algo+Data | >5y ago  | man    |
+| Paolo       | Ferragina        | Univerisy of Pisa                        | Italy       | ferragina@di.unipi.it              | http://www.di.unipi.it/~ferragin                                     | Algo+Data | >5y ago  | man    |
+| Roberto     | Grossi           | Univerisy of Pisa                        | Italy       | grossi@di.unipi.it                 | http://www.di.unipi.it/~grossi                                       | Algo+Data | >5y ago  | man    |
+| Johannes    | Fischer          | Dortmund University                      | Germany     | johannes.fischer@cs.tu-dortmund.de | https://ls11-www.cs.uni-dortmund.de/staff/fischer                    | Data      | >5y ago  | man    |
+| Diego       | Seco             | Universidad de Concepcion                | Chile       | dseco@udec.cl                      |                                                                      | Data      | >5y ago  | man    |
+| Philip      | Bille            | Technical University of Denmark          | Denmark     | phbi@dtu.dk                        | http://www.compute.dtu.dk/~phbi                                      | Data      | >5y ago  | man    |
+| Rajeev      | Raman            | University of Leicester                  | England     | r.raman@leicester.ac.uk            | http://www.cs.le.ac.uk/people/rraman                                 | Data      | >5y ago  | man    |
+| Rossano     | Venturini        | University of Pisa                       | Italy       | rossano.venturini@unipi.it         | http://zola.di.unipi.it/rossano/                                     | Data      | >5y ago  | man    |
+| Giovanni    | Manzini          | University of Piemonte Orientale         | Italy       | manzini@mfn.unipmn.it              | http://people.unipmn.it/manzini/                                     | Data      | >5y ago  | man    |
+| Hideo       | Bannai           | Kyushu University                        | Japan       | bannai@inf.kyushu-u.ac.jp          | http://www.i.kyushu-u.ac.jp/~bannai                                  | Data      | >5y ago  | man    |
+| Simon       | Puglisi          | University of Helsinki                   | Finland     | puglisi@cs.helsinki.fi             | http://www.cs.helsinki.fi/u/puglisi                                  | Data      | >5y ago  | man    |
+| Yakov       | Nekrich          | University of Waterloo                   | Canada      | ynekrich@uwaterloo.ca              | https://cs.uwaterloo.ca/~ynekrich                                    | Data      | >5y ago  | man    |
+| Shunsuke    | Inenaga          | Kyushu University                        | Japan       | inenaga@inf.kyushu-u.ac.jp         | http://str.i.kyushu-u.ac.jp/~inenaga                                 | Data      | >5y ago  | man    |
+| Inge        | Li Gortz         | Technical University of Denmark          | Denmark     | inge@dtu.dk                        | http://www.imm.dtu.dk/~inge                                          | Data      | >5y ago  | woman  |
+| Zsuzsanna   | Liptak           | University of Verona                     | Italy       | zsuzsanna.liptak@univr.it          | http://profs.scienze.univr.it/~liptak                                | Data      | >5y ago  | woman  |
+| Nieves      | Brisaboa         | Universidad de Corunia                   | Spain       | risaboa@udc.es                     | http://lbd.udc.es/ShowResearcherInformation.do?id=12                 | Data      | >5y ago  | woman  |
+| Paola       | Bonizzoni        | University of Milano                     | Italy       | bonizzoni@disco.unimib.it          | http://algolab.eu/people/bonizzoni                                   | Data      | >5y ago  | woman  |
+| Rolf        | Klein            | University of Bonn                       | Germany     | rolf.klein@uni-bonn.de             | http://tizian.cs.uni-bonn.de/staff/klein.html                        | Algo      | >5y ago  | man    |
+| Lene Monrad | Favrholdt        | University of Southern Denmark           | Denmark     |                                    |                                                                      | Algo      | >5y ago  | woman  |
+| Javiel      | Rojas            |                                          | Chile       | jrojas@dcc.uchile.cl               |                                                                      | Algo      | soon     | man    |
+| Carlos      | Ochoa            |                                          | Chile       | cochoa@dcc.uchile.cl               |                                                                      | Algo      | soon     | man    |
+|             |                  |                                          |             |                                    |                                                                      |           |          |        |
+| Vladimir    | Estivill-Castro  | Griffith University                      | Australia   |                                    |                                                                      | Algo      | >5y ago  | man    |
+| Rolf        | Niedermeier      | TU Berlin                                | Germany     | rolf.niedermeier@tu-berlin.de      | http://www.akt.tu-berlin.de/menue/team/niedermeier-rolf              | Algo      | >5y ago  | man    |
+| Marek       | Karpinsky        | University of Bonn                       | Germany     | marek@cs.uni-bonn.de               | http://theory.cs.uni-bonn.de/~marek                                  | Algo+Data | >5y ago  | man    |
+| Eunjung     | Kim              |                                          |             |                                    |                                                                      | Algo      | >5y ago  | woman  |
+| Anna        | Adamaszek        |                                          |             |                                    |                                                                      |           |          | woman  |
+| Cristina    | Bazgan           | University Paris Dauphine                | France      | bazgan@lamsade.dauphine.fr         |                                                                      | Algo      | >5y ago  | woman  |
+| Glencora    | Borradaile       | Oregon State University                  | USA         | glencora@eecs.oregonstate.edu      |                                                                      | Algo      | >5y ago  | woman  |
+| Amr         | Elmasry          | Alexandria University                    | Egypt       | elmasry@alexu.edu.eg               | http://page.academia.edu/AmrElmasry                                  | Data      | >5y      | man    |
+| Yoshio      | Okamato          | The University of Electro-Communications | Japan       | okamotoy@uec.ac.jp                 | http://dopal.cs.uec.ac.jp/okamotoy/                                  | Algo      | >5y      | man    |
+| Reza        | Dorrigiv         | Dalhousie University                     | Canada      | rdorrigiv@cs.dal.ca                | http://web.cs.dal.ca/~rdorrigiv/                                     | Algo      | 2010     | man    |
+|             |                  |                                          |             |                                    |                                                                      |           |          |        |
+|-------------+------------------+------------------------------------------+-------------+------------------------------------+----------------------------------------------------------------------+-----------+----------+--------|
+
+* Stats
+
+|                  | Algo | Data | Algo | Women | Men | Junior | senior | total |
+|                  |      |      | Data |       |     |        |        |       |
+|------------------+------+------+------+-------+-----+--------+--------+-------|
+| [2015-10-22 Thu] |   23 |   22 | 8    |    18 |  42 |     12 |     39 | 60    |
+|                  |      |      |      |       |     |        |        |       |
+
+* Travis' dream team [2015-10-14 Wed]
+| Artur     | Jez                  |
+| Mark      | Jones                |
+| Petteri   | Kaski                |
+| Tomasz    | Kociumaka            |
+| Gadi      | Landau               |
+| Daniel    | Lokshtanov           |
+| Alberto   | Ordonez              |
+| Nadia     | Pisanti              |
+| Jouni     | Siren                |
+| Vladimir  | Shchur               |
+| Virginia  | Vassilevska Williams |
+| Stephane  | Vialette             |
+| Oren      | Weimann              |
+| Michal    | Ziv-Ukelson          |
+
+* Simon's dream team [2015-10-30 Fri]
+Pawel Gawrychowski (y)
+Cecilia Hernandez (y,f)
+Tomasz Kociumaka (y)
+Susanna Ladra (y,f)
+Alistair Moffat
+Gonzalo Navarro
+Nicola Prezza (y)
+Rajeev Raman
+Jouni Siren (y)
+Tatiana Starikovskaya (y,f)
+Rossano Venturini
+Sebastiano Vigna
+
+* Proposed list of organizers from Petteri Kaski
+
+| Rolf      | Niedermeier   |
+| Martin    | Grohe         |
+| Stefan    | Kratsch       |
+| Markus    | Bl\"oser |
+| Dieter    | Kratsch       |
+| Radu      | Curticapean   |
+| Karl      | Bringmann     |
+| Sebastian | Krinninger    |
+
+* Participants from 2009 Seminar
+
+    Spyros Angelopoulos (MPI für Informatik – Saarbrücken, DE)
+    Jérémy Barbay (University of Chile, CL)
+    Shai Ben-David (University of Waterloo, CA)
+    Sagi Ben-Moshe (Technion – Haifa, IL)
+    Nadja Betzler (Universität Jena, DE)
+    Joan Boyar (University of Southern Denmark – Odense, DK)
+    Luca Castelli Aleardi (Ecole Polytechnique – Palaiseau, FR)
+    Marek Chrobak (University of California – Riverside, US)
+    Britta Dorn (Universität Tübingen, DE)
+    Reza Dorrigiv (University of Waterloo, CA)
+    Martin R. Ehmsen (University of Southern Denmark – Odense, DK)
+    Amr Elmasry (MPI für Informatik – Saarbrücken, DE)
+    Leah Epstein (University of Haifa, IL)
+    Vladimir Estivill-Castro (Griffith University – Brisbane, AU)
+    Lene Monrad Favrholdt (University of Southern Denmark – Odense, DK)
+    Michael R. Fellows (University of Newcastle, AU)
+    Rudolf Fleischer (Fudan University – Shanghai, CN)
+    Robert Fraser (University of Waterloo, CA)
+    Magdalena Grüber (HU Berlin, DE)
+    Jiong Guo (Universität Jena, DE)
+    Marek Karpinski (Universität Bonn, DE)
+    David G. Kirkpatrick (University of British Columbia – Vancouver, CA)
+    Rolf Klein (Universität Bonn, DE)
+    Christian Knauer (FU Berlin, DE)
+    Stefan Kratsch (MPI für Informatik – Saarbrücken, DE)
+    Alexander Johannes Langer (RWTH Aachen, DE)
+    Kim Skak Larsen (University of Southern Denmark – Odense, DK)
+    Daniel Lokshtanov (University of Bergen, NO)
+    Alejandro Lopez-Ortiz (University of Waterloo, CA)
+    Dániel Marx (Budapest University of Technology & Economics, HU)
+    Nicole Megow (MPI für Informatik – Saarbrücken, DE)
+    Kurt Mehlhorn (MPI für Informatik – Saarbrücken, DE)
+    Friedhelm Meyer auf der Heide (Universität Paderborn, DE)
+    Ian Munro (University of Waterloo, CA)
+    Rolf Niedermeier (Universität Jena, DE)
+    Yoshio Okamoto (Tokyo Institute of Technology, JP)
+    Daniel Raible (Universität Trier, DE)
+    Rüdiger Reischuk (Universität Lübeck, DE)
+    Frances A. Rosamond (University of Newcastle, AU)
+    Saket Saurabh (University of Bergen, NO)
+    Raimund Seidel (Universität des Saarlandes, DE)
+    Hadas Shachnai (Technion – Haifa, IL)
+    Ulrike Stege (University of Victoria, CA)
+    Gerhard J. Woeginger (TU Eindhoven, NL)
+    Sandra Zilles (University of Alberta, CA)
+
+* Jeremy's list
+
+    1) [X] Amr Elmasry (MPI für Informatik – Saarbrücken, DE)
+    2) [X] Yoshio Okamoto (Tokyo Institute of Technology, JP)
+    3) [X] Reza Dorrigiv (University of Waterloo, CA) 
+    4) [X] Alejandro Lopez-Ortiz (University of Waterloo, CA)
+    5) [X] Raimund Seidel (Universität des Saarlandes, DE)
+    6) [X] Luca Castelli Aleardi (Ecole Polytechnique – Palaiseau, FR)
+    7) [X] Stephane Durocher (University of Manitoba, CA)
+    8) [X] Allyx Fontaine (University of Bristol)
+    9) [X] Cecilia Hernandez (Universidad de Concepcion)
+    10) [X] Javiel Rojas (Universidad de Chile)
+    11) [X] Kurt Mehlhorn (Max-Planck-Institut f\"ur Informatik)
+    12) [X] Carlos Ochoa (Universidad de Chile)
+
+I would suggest Gonzalo Navarro as someone general.
