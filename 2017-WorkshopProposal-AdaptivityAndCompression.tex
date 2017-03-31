@@ -1,0 +1,885 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage[utf8]{inputenc}
+
+\usepackage{multicol}
+
+\usepackage{times} % Specify font, especially when using ps2pdf after.
+\usepackage{amssymb}
+%\usepackage[sort]{natbib} % To have the references sorted in good order.
+\usepackage{url}
+\usepackage{fullpage}
+\usepackage{xspace}
+\usepackage{versions}
+\includeversion{FIVEDAYS}\excludeversion{THREEDAYS}
+\excludeversion{INUTILE}
+\excludeversion{LONG}
+%\markversion{TODO} \markversion{JEREMY} \markversion{SIMON} \markversion{STEFAN} \markversion{TRAVIS} 
+\excludeversion{TODO} \excludeversion{JEREMY} \excludeversion{SIMON} \excludeversion{STEFAN} \excludeversion{TRAVIS} 
+
+% \usepackage{longtable} % To divide the table with the list of guests between several pages (http://www.ctan.org/pkg/longtable)
+% \usepackage{array,etoolbox} %% To number automatically the rows of the list of guests, from http://tex.stackexchange.com/questions/21243/automatic-table-row-numbers
+% \preto\tabular{\setcounter{magicrownumbers}{0}}
+% \newcounter{magicrownumbers}
+% \newcommand\rownumber{\stepcounter{magicrownumbers}\arabic{magicrownumbers}}
+% \def\rownumber{}
+
+\usepackage{booktabs}
+
+% \usepackage{rotating} % To rotate the list of guests as suggested by Travis
+
+\usepackage{hyperref}
+
+\newcommand{\access}{\ensuremath{\texttt{access}}}
+\newcommand{\rank}{\ensuremath{\texttt{rank}}}
+\newcommand{\select}{\ensuremath{\texttt{select}}}
+\newcommand{\abstractDataType}{\ensuremath{{\cal T}}}
+\newcommand{\etal}{~et al.}
+\newcommand{\Oh}{\ensuremath{{\cal O}}}
+\newcommand{\entropy}{\ensuremath{{\cal H}}}
+\newcommand{\NP}{\ensuremath{\mathsf{NP}}\xspace}
+
+\begin{document}
+
+\title{Fine-Grained Analysis of Algorithms and Data Structures}
+
+% \title{ Application for a 5 day long Dagstuhl Seminar, for 45 researchers \\ \emph{
+% Fine-Grained Analysis of Algorithms and Data Structures
+% % Parameterized Complexity, Adaptivity, and Compression
+% } }
+
+\author{J\'er\'emy Barbay \and Johannes Fischer \and Stefan Kratsch \and Srinivasa Rao }
+
+\maketitle              % typeset the title of the contribution
+
+%SK: suggested new abstract; feel free to replace by old one (below) or to change in any desired way
+\begin{abstract}
+This seminar will bring together researchers from adaptive algorithms and parameterized complexity with those working on compressed data structures and compressed indices. While all of these subareas of algorithms and data structures, respectively, focus on ``going beyond the worst-case'' for classes of structurally restricted inputs, there has been very little interaction between them. The goal of the seminar is to foster this interaction by teaching one another the key techniques of ones areas, through tutorials and short talks, and then discussing open problems at the intersection of the areas in varying small groups; for example, the concept of treating problems together with some structural measure (like sortedness or treewidth) and reductions between such ``parameterized problems'' to understand relations and gain lower bounds. Similarly, fast algorithms relative to structural measures should benefit from a more informed (compressed) data structure design.
+\end{abstract}
+
+% \begin{abstract}
+% This application proposes a seminar bringing together two groups of researchers characterized, on the one hand, by research on algorithms which run faster on large families of instances than in the worst case over all instances of same size (e.g. parameterized complexity and adaptive analysis of algorithms); and on the other hand, by research on data structures which use less space on large families of instances than in the worst case over all instances of same size (e.g. compressed data structures). Albeit those themes of research share a similar perspective of going ``beyond worst case analysis'', examples of work combining both approaches have been rare: we hope to remedy to that with a joined seminar.
+% \end{abstract}
+
+%SK: removed table of contents for space reasons; probably not needed for 10 pages
+% {\Large
+% \setcounter{tocdepth}{1}
+%  \tableofcontents}
+
+%SK: grouping basic information into one section
+
+\section{Basic information}
+
+\subsubsection*{ Organizers} 
+\begin{itemize}
+\item Dr.\ J\'er\'emy Barbay, Assistant professor at the University of Chile, \textsc{Chile};
+\item Dr.\ Johanes Fischer,  , \textsc{Germany};
+\item Dr.\ Stefan Kratsch,  Professor at the University of Bonn, \textsc{Germany}.
+\item Dr.\ Srinivasa Rao Sati, , \textsc{Korea};
+\end{itemize}
+
+\subsubsection*{Type of event}
+Dagstuhl seminar, 5 days, 45 participants. 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsubsection*{Topics}
+
+% \begin{TODO}
+% \begin{JEREMY}
+% Can someone read again the bases of the Dagstuhl's seminar to find the specifications of the ``Classification'' section? I did not see it when I studied it before creating this proposal.
+% \end{JEREMY}
+% \begin{STEFAN}
+% I have done that. Below is the complete list of valid choices. I have commented out the things that do not apply (I think).
+% \end{STEFAN}
+% \end{TODO}
+
+%     artificial intelligence / robotics,
+%     computer graphics / computer vision,
+%     data bases / information retrieval,
+    data structures / algorithms / complexity
+%     hardware,
+%     multimedia,
+%     mobile computing,
+%     modelling / simulation,
+%     networks,
+%     optimization / scheduling,
+%     programming languages / compiler,
+%     security / cryptography,
+%     semantics / formal methods,
+%     society / HCI,
+%     soft computing / evol. alg.,
+%     sw-engineering,
+%     verification / logic
+
+% Algorithms /
+% Analysis / 
+% Complexity /
+% Compression /
+% Data Structures
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsubsection*{Keywords}
+
+% \begin{JEREMY}
+% The list of keywords that I did has 6 algorithms related keywords, and only 2 compression related keywords.
+% \begin{TODO}
+% Travis, Simon, can you think about some additional compression related keywords to add?
+% \end{TODO}
+% \end{JEREMY}
+% \begin{STEFAN}
+% If have shortened the list to roughly one keyword per subarea.
+% \end{STEFAN}
+
+
+Adaptive (analysis of) algorithms, 
+compressed data structures, 
+compressed indices,
+% compression-aware algorithms,
+% fine-grained analysis, 
+% fixed-parameter tractability,
+% instance-optimal algorithms,
+% output-sensitive algorithms,
+parameterized complexity.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%SK: since Dagstuhl said that we do not need to list the dates in the proposal, I have reduced this to the minimum
+\subsubsection*{Preferred dates and block-out dates}
+
+Preferred dates and block-out dates are given via the online portal at\newline \texttt{http://boemund.dagstuhl.de/dosa/author/index.php}.
+
+% \subsubsection*{Proposed dates}
+% 
+% \begin{TODO}
+% \begin{JEREMY}
+% I would prefer the seminar to be as soon as possible, and
+% I would prefer to go to Europe in the Summer. Anybody else has preferences?
+% \end{JEREMY}
+% \begin{SIMON}
+% September is the nicest month of the summer in Germany, and the time of the semester break.
+% \end{SIMON}
+% \begin{TRAVIS}
+% Remember that ESA and IPEC are usually in September; FOCS, SPIRE and SISAP are in October (the latter two in Japan).  We should check conferences like ICALP, APPROX + RANDOM, CPM, MFCS, etc.
+% \end{TRAVIS}
+% \begin{itemize}
+% \item Seminars with up to 30 participants are likely to be scheduled between
+%   \begin{itemize}
+% \item July 2016 and 
+% \item February 2017
+%   \end{itemize}
+%   \begin{itemize}
+% \item those with up to 45 participants between
+%   \begin{itemize}
+% \item October 2016 and 
+% \item June 2017.
+%   \end{itemize}
+%   \end{itemize}
+% \end{itemize}
+% .
+% \end{TODO}
+% 
+%   \begin{FIVEDAYS}
+%   \begin{itemize}
+% \item \textbf{Preferred}: October 2016
+% \item \textbf{Alternate 1}: November 2016
+% \item \textbf{Alternate 2}: December 2016
+% \item \textbf{Alternate 3}: January 2017
+%   \end{itemize}
+%   \end{FIVEDAYS}
+% \begin{THREEDAYS}
+% \begin{itemize}
+% \item \textbf{Preferred}: October 2016
+% \item \textbf{Alternate 1}: July  2016
+% \item \textbf{Alternate 2}: August 2016
+% \item \textbf{Alternate 3}: November 2016
+%   \end{itemize}
+%   \end{THREEDAYS}
+%   
+% \subsubsection*{Blockout dates}
+% 
+% \begin{itemize}
+%  \item June 22-24, 2016 (SWAT)
+%  \item August 22-26, 2016 (MFCS; ALGO: ESA, APPROX-RANDOM, etc.)
+%  \item October 17-21, 2016 (SPIRE); October 18-20 (FOCS); October 24-26 (SISAP)
+%  \item Fall 2016 (IWOCA)
+%  \item January ?-?, 2017 (SODA)
+% \end{itemize}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%SK: this is also asked in the meta-data, so I guess we can skip it here
+% \subsubsection*{Further information}
+% 
+% \begin{itemize}
+%  \item Relevance for industry: less relevant
+%  \item Relevance for mainstream media: less relevant
+%  \item Interdisciplinarity: No research disciplines outside of informatics are involved, but four disciplines of informatics are brought together.
+% \end{itemize}
+
+
+% Further Information
+% 
+% Please rate the following issues:
+% 
+%     Relevance for industry: How important is the seminar topic for industrial research fields (ranging from "very relevant" to "less relevant").
+%     Relevance for mainstream media: Is the seminar topic suitable to be communicated to a broader audience?
+%     Interdisciplinarity: Are research disciplines outside of informatics involved in the proposed seminar?
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%SK: I moved the content of the following section into the next one
+% \section{Seminar title: \emph{Fine-Grained Analysis of Algorithms and Data Structures}}
+% \label{sec:title}
+
+\section{Description of the seminar}
+
+\begin{INUTILE}
+This event is meant to be a follow-up to the \texttt{Dagstuhl Seminar 09171} in 2009, which gathered 45 participants on the topic of ``\emph{Adaptive, Output Sensitive, Online and Parameterized Algorithms}'', which achieved a larger visibility of the idea of going ``beyond the worst case'' (e.g. the recent Berkeley workshop on ``Fine-Grained Analysis'', and adaptive results in new areas of research \cite{2015-SPIRE-AdaptiveComputationOfTheSwapInsertCorrectionDistance-BarbayPerez}). The proposed event would gather researchers from the same communities as the previous one, plus researchers from the communities related to data compression, in the hope to similarly foster new interactions, in both directions between the field of studies of algorithms and of data structures.
+\end{INUTILE}
+
+This application proposes a seminar bringing together two groups of researchers characterized, on the one hand, by research on algorithms which run faster on large families of instances than in the worst case over all instances of same size  (e.g. parameterized complexity and adaptive analysis of algorithms); and on the other hand, by research on data structures which use less space on large families of instances than in the worst case over all instances of same size (e.g. compressed data structures). 
+%
+Albeit those themes of research share a similar perspective of aiming ``beyond worst case analysis'' (over instances of fixed size), examples of work combining both approaches have been rare: we hope to change this by a joined seminar.  
+%
+In Section \ref{sec:topics-seminar} we describe the two main topics of the seminar: the analysis of algorithms on one hand, and the analysis of data structures on the other hand. In Section \ref{sec:objectives-seminar} we describe the two main objectives of the seminar: identifying and merging common techniques between the two topics, and identifying potential synergies.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Topics of the Seminar}
+\label{sec:topics-seminar}
+
+The aim of the seminar is to gather two distinct communities: the one focusing on the design and analysis of algorithms, whose research topics are described in Section~\ref{sec:algorithms}, and the other one focusing on the design and analysis of compression schemes and compressed data structures, whose research topics are described in Section~\ref{sec:dataStructures}.
+
+\subsubsection{Analysis of Algorithms}
+\label{sec:algorithms}
+
+Traditionally the analysis of algorithms measures the complexity of a problem or of an algorithm in terms of the worst-case behavior over all inputs of a given size. \begin{LONG} This is the standard analysis of algorithms, pioneered by Knuth\cite{1968-BOOK-TheArtOfComputerProgramming-Knuth}, which measures the performance of the algorithm in the worst case over instances of fixed size. As the volume of data processed grows, the gap between the performance of the best algorithm "optimal in the worst case" and the best algorithm "in practice" grows as well, which reduce the interest of worst case theoretical analysis.
+
+\end{LONG}
+However, in certain cases, improved analysis and algorithms can be obtained by considering a finer partition of the input space.  This idea has been independently rediscovered in many areas, under the names of \emph{output-sensitive algorithms} (in \textsc{Computational Geometry}~\cite{1985-SOCG-OutputSizeSensitiveAlgorithmsForFindingMaximalVectors-KirkpatrickSeidel,1986-JCom-TheUltimatePlanarConvexHullAlgorithm-KirkpatrickSeidel}), \emph{parameterized complexity} (in \textsc{Computational Complexity}~\cite{CyganFKLMPPS15}), \emph{adaptive (analysis of) algorithms} (in \textsc{algorithmics}~\cite{1992-ACJ-AnOverviewOfAdaptiveSorting-MoffatPetersson}), \emph{instance-optimal algorithms} (in \textsc{Database}~\cite{2003-JCSS-OptimalAggregationAlgorithmsForMiddleWare-FaginLotemNaor} and \textsc{Computational Geometry}~\cite{2009-FOCS-InstanceOptimalGeometricAlgorithms-AfshaniBarbayChan}), \emph{online competitive ratio} (in \textsc{algorithmics}~\cite{2007-SODA-OnTheSeparationAndEquivalenceOfPagingStrategies-AngelopoulosDorrigivLopezOrtiz}), or \emph{fine-grained analysis} (in \textsc{algorithmics}). We list below a selection of the relevant techniques of analysis:
+
+\begin{itemize}
+
+\item \emph{Fine-Grained Analysis} of Polynomial problems:
+\begin{TODO}
+\begin{STEFAN}
+@Jeremy: I think it would be nice to have some general words about adaptive algorithms here? Should the entry be called adaptive algorithms for polynomial problems?
+\end{STEFAN}
+\end{TODO}
+  \begin{itemize}
+
+\item \emph{Input Sensitivity}: A generalization of output sensitivity, where any group of instances can be defined (generally by a measure of ``difficulty'' of the instances or an additional ``parameter'' of the problem) in order to refine the standard worst-case analysis to smaller classes of instances. Among those techniques, it is useful to distinguish two classes in particular, which have some potential for synergy through this seminar: \emph{Input-Order Sensitivity} (e.g. adaptive permutation sorting) and \emph{Structure Sensitivity} (e.g. multiset sorting adaptive to frequencies).
+  \begin{LONG}
+  \begin{itemize}
+\item \emph{Input-Order Sensitivity}: The only technique of adaptive analysis which can be performed for algorithms sorting permutations~\cite{1992-ACMCS-ASurveyOfAdaptiveSortingAlgorithms-EstivillCastroWood,1995-DAM-AFrameworkForAdaptiveSorting-PeterssonMoffat,2013-TCS-CompressedRepresentationsOfPermutationsAndApplications-BarbayNavarro,2012-TCS-LRMTreesCompressedIndicesAdaptiveSortingAndCompressedPermutations-BarbayFischerNavarro,1994-IC-SortingShuffledMonotoneSequences-LevcopoulosPetersson,1985-TCom-MeasuresOfPresortednessAndOptimalSortingAlgorithms-Mannila,1979-CTCS-SortingPresortedFiles-Mehlhorn,1980-CACM-BestSortingAlgorithmForNearlySortedLists-CookKim,1958-InfAndC-SortingTreesAndMeasuresOfORder-Burge}, it measures the complexity of the algorithm in the worst case over all permutations of a given input. In the case of permutation sorting algorithms, the input is a permutation over $[1..n]$ and is simply described by $n$.
+
+\item \emph{Structure Sensitivity}: Technique referring to algorithms which ignore the order of the input and focus on its content (e.g. such as repetitions of elements in multisets, or such as the position of points in a data set rather than the order in which they are given). While meaningless on permutations, Munro and Spira~\cite{1976-JComp-SortingAndSearchingInMultisets-MunroSpira} showed how it does apply to sorting multisets, and Boyar and Favrholdt~\cite{2007-TALG-TheRelativeWorstOrderRatioForOnlineAlgorithms-BoyarFavrholdt} introduced it as ``relative worst order ratio'' in the context of online algorithms. A particular case is that of \emph{Output Size Sensitivity}, the first technique of adaptive analysis of algorithms to be introduced in Computational Geometry\footnote{This type of analysis was already implicitly performed for all operations on texts and databases which output size can vary from null to exponential in the size of the input.}, by Kirkpatrick and Seidel~\cite{1986-JCom-TheUltimatePlanarConvexHullAlgorithm-KirkpatrickSeidel}, which measures the complexity of the algorithm in the worst case over instances of fixed input and output size.
+  \end{itemize}
+  \end{LONG}
+
+\item \emph{Instance Optimality}: Fagin et al. \cite{2001-PDS-OptimalAggregationAlgorithmsForMiddleWare-FaginLotemNaor,2003-JCSS-OptimalAggregationAlgorithmsForMiddleWare-FaginLotemNaor} introduced the concept of an instance-optimal algorithm such that its cost is at most a constant factor from the cost of any other algorithm running on the same input, for every input instance.  For many problems, this requirement is too stringent, so Afshani\etal\cite{2009-FOCS-InstanceOptimalGeometricAlgorithms-AfshaniBarbayChan} considered instead variants of instance optimality on restricted models, limited to the structure of the instance as opposed to the order in which it is input.
+
+  \end{itemize}
+
+\item \emph{Parameterized Complexity} of \NP-hard problems: This area studies the complexity of (hard) computational problems by relating the running time not only to the input size but also to one or more problem-specific \emph{parameters}. Each choice of parameters for a given problem yields a different \emph{parameterized problem}. Appropriate notions of \emph{parameterized reductions} allow to relate such problems and give rise to a theory of parameterized intractability similar to the theory of \NP-hardness. Complementing this, there are two notions of parameterized tractability:
+  \begin{itemize}
+\item \emph{Fixed-Parameter Tractability}: 
+This relaxes polynomial-time tractability by allowing an additional factor in the runtime that may only depend on the parameter values; for \NP-hard problems this factor is usually exponential in the parameter. Ideally, such runtimes offer a smooth transition between fast polynomial-time algorithms for instances with bounded parameter values and the worst-case exponential-time algorithms that are known for the general case of the problem. A fixed-parameter tractability result also proves that the parameter in question is responsible for the (likely) polynomial-time intractability of the problem, since bounding the parameter yields polynomial-time algorithms.
+\item \emph{Kernelization}:
+This notion formalizes the intuitive notion of efficient preprocessing for \NP-hard problems. Given an instance of a parameterized problem, i.e., input data plus parameter, a kernelization takes polynomial time and reduces an equivalent instance of size bounded only in the parameter. If we request size polynomial in the parameter then this strictly refines fixed-parameter tractability (modulo complexity assumptions); for arbitrary size bounds the two notions are known to be equivalent. Focus in kernelization is on classifying parameterized problems into admitting or not admitting polynomial or even linear-sized kernels, and proving tightness of these bounds.
+  \end{itemize}
+
+\end{itemize}
+
+\begin{TODO}
+\begin{STEFAN}
+@Jeremy: The following paragraph seems a bit out of synch with the stuff above?
+\end{STEFAN}
+\end{TODO}
+As compression schemes take advantage of the ``easiness'' (in terms of compressibility) of practical data as compared to the worst possible data (e.g. random), so called ``Adaptive Algorithms'' take advantage of the ``easiness'' (in terms of computability) of practical instance as compared to the worst case complexity. The efficiency of such algorithms is measured by their Parameterized Complexity, a measure of computational complexity taking as parameter not only the size of the input (as in traditional computational complexity analysis), but also one or more measures of difficulty. We describe in the following sections the related concepts on data-structures and compression.
+
+
+\subsubsection{Analysis of Data Structures}
+\label{sec:dataStructures}
+
+There is a relation between the execution time of a comparison based algorithm and the representation of the data it processes (e.g.  the relation between \texttt{Wavelet Trees} for permutations and the \texttt{Merge Sort} algorithm~\cite{2013-TCS-CompressedRepresentationsOfPermutationsAndApplications-BarbayNavarro} yields a better encoding for permutations). We describe here some of the key concepts on compressed data structures, which we hope to put in relation with techniques of analysis of algorithms.
+
+\begin{itemize}
+\begin{LONG}
+\item An \emph{Encoding} is a coding scheme that supports \emph{access} to the data, either through queries specific to this data type (e.g., $i$-th value of a permutation) or through access to a binary representation of the object (e.g., the $i$-th block of $\lg n$ bits of the integer array representing the permutation).  Information theory indicates that the best possible encoding, in the worst case over the $f(n)$ instances of fixed size $n$, uses at least $\lg f(n)$ bits. This information theory lower bound is used as a baseline (or \emph{uncompressed baseline}) to express the space taken by any encoding.  A \emph{Compressed Encoding} is a compressed data structure supporting at least the {\access} operator, and a \emph{Compression Scheme} is the algorithm producing this compressed encoding.
+  \end{LONG}
+
+\item A \emph{Data Structure} $\mathcal{D}$ is an encoding which supports various operators (e.g., a run encoding of permutations~\cite{2013-TCS-CompressedRepresentationsOfPermutationsAndApplications-BarbayNavarro} supporting the operators \texttt{access} and \texttt{inverse access}). Formally, it specifies how to encode data from some \emph{Data Type} $\cal T$ (e.g., permutations) so as to support the operators specified by a given \emph{Abstract Data Type} {\abstractDataType} (e.g., \texttt{access} and \texttt{inverse access}).  By definition, any data structure supporting {\access}, and possibly some other operators, will use at least that much space as the lower bound for any encoding. The additional space used to support operators efficiently is called the \emph{redundancy} of the data structure. The following classifications of Data Structures are of particular interest:
+
+\begin{itemize}
+\item A \emph{Succinct Data Structure}~\cite{1989-FOCS-SpaceEfficientStaticTreesAndGraphs-Jacobson} is a data structure whose redundancy is asymptotically negligible when the size of the instance goes to infinity, that is, whose redundancy is within $o(\lg f(n))$.
+\item A {\em Compressed Data Structure} (also called ``opportunistic data structure''~\cite{2004-Algoritmica-EngineeringAlightweightSuffixArrayConstructionAlgorithm-ManziniFerragina} or ``ultra-succinct data structure''~\cite{2007-SODA-UltraSuccinctRepresentationOfORderedTrees-JanssonSadakaneSung}) for a compressibility measure $\mu$ is a data structure that requires $\lg f(n,\mu) + o(\lg f(n))$ bits to encode any instance of size $n$ and compressibility $\mu$.
+\item A {\em Fully-Compressed Data Structure} for a compressibility measure $\mu$ is a data structure requiring $\lg f(n,\mu) + o(\lg f(n,\mu))$ bits on any instance of size $n$ and compressibility $\mu$. While the $o(\cdot)$ term is asymptotic in $n$, it is useful to allow $\mu$ to depend on $n$ too.
+\end{itemize}
+
+\item An \emph{Index} is a structure that, given access to some data structure $\cal D$ supporting a defined abstract data type $\abstractDataType$ (e.g., a data structure for bit-vectors supporting the {\access} operator), extends the set of operators supported to a more general abstract data type $\abstractDataType'$ (e.g., {\rank} and {\select} operators).  By analogy with succinct data structures, the space used by an index is called \emph{redundancy}.
+  \begin{itemize}
+\item A \emph{Succinct Index}~\cite{2011-TALG-SuccinctIndexesForStringsBinaryRelationsAndMultiLabeledTrees-BarbayHeMunroRao} or \emph{Systematic Data Structure} $\cal I$ is simply an index whose redundancy is asymptotically negligible in comparison to the uncompressed baseline when the size $n$ of the instance goes to infinity, that is, $o(\lg f(n))$ bits.
+
+\item A \emph{Compressed Index} for a compressibility measure $\mu$ is an index whose redundancy is asymptotically negligible in comparison to the compressed baseline for $\mu$ when $n$ goes to infinity, that is, it uses $o(\lg f(n,\mu))$ bits of space.
+  \end{itemize}
+
+\end{itemize}
+
+In many cases, the research on compressed data structures is orthogonal to the research on algorithms, in the sense that supporting operators in less time directly yields a faster execution of the algorithms based on those operators, but does not affect the design of the algorithm. We suggest in the next section some more intimate relations between the two topics.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Objectives of the Seminar}
+\label{sec:objectives-seminar}
+
+The main objective of the seminar is to gather researchers who share the philosophy of going ``beyond the worst case'' but have applied it to distinct fields, such as polynomial or \NP-hard problems on one hand, and compressed data structures or indices on the other hand.  We describe three types of interactions (see Section~\ref{sec:synergies}) that we hope such a gathering will promote, and what impact it could have on the community in the long term  (Section~\ref{sec:impact}) in reducing the re-invention of techniques and identifying new problems.
+
+%\subsubsection{Synergies and Research Questions}
+\subsubsection{Synergies}
+\label{sec:synergies}
+
+While sharing the same perspective of aiming ``beyond worst case analysis'', each community has been identifying its own problems and developing its own techniques. We describe here three types of interactions between researchers from distinct areas that we hope will occur during the seminar.
+
+\paragraph{Results implied from other fields:}
+
+Some results from a given field can imply results in another field. 
+%
+For instance, the results on the compression of Wavelet Trees directly inspired an improved analysis of the running time of the \texttt{Adaptive Merge Sort} algorithm \cite{2013-TCS-CompressedRepresentationsOfPermutationsAndApplications-BarbayNavarro}.  
+%
+Researchers from different fields learning each other's techniques is likely to bring other such refinements.
+%
+For instance, faster algorithms can inspire compression schemes: any correct algorithm must be able to output a certificate of the correctness of its output for a given input. For some problems (e.g. \textsc{Sorting} a permutation), this certificate describes the instance itself. Then, an algorithm which performs faster on some classes of instances, generates a shorter certificate, which suggests a compressed representation of the input.
+% 
+Such relations could be exploited more often in the context of problems solvable in polynomial time, and does not seem to have been explored in the context of NP-hard problems.
+
+\paragraph{Methodology implied from other fields:}
+
+Some methodologies from a given field can be applied to other fields.
+%
+For instance, the concept of entropy, well known in the field of compressed data structures, inspired refinements in the analysis of adaptive sorting algorithms \cite{2013-TCS-CompressedRepresentationsOfPermutationsAndApplications-BarbayNavarro}.
+%
+Researchers from different fields learning each other's methodologies is likely to bring other such refinements.
+%
+For instance, the study of ``Adaptive Sorting'' algorithms has introduced reductions between measures of disorder \cite{1992-ACJ-AnOverviewOfAdaptiveSorting-MoffatPetersson,1995-DAM-AFrameworkForAdaptiveSorting-PeterssonMoffat}, and the study of fixed-parameter tractable problems has introduced the more general \emph{parameterized reductions} between pairs formed by problems and measure~\cite{DowneyF13,CyganFKLMPPS15}. This latest methodology applied to adaptive sorting will bring a better understanding of the input order sensitivity of other problems. There is hope that it could also inspire the definition of such reductions between pairs formed by \textsc{Abstract Data Types} and measures of compressibility in the study of compressed data structures and of compressed indices.
+
+\paragraph{Tailored Problems:}
+
+A better understanding of the bottlenecks in a given field will help to focus on specific problems in related fields.
+%
+For instance, better approximation algorithms for computing the maximum clique of a graph, a well studied problem in the field of algorithmics, has tremendous applications to the compression and indexing of very large graphs (e.g. graph of the web and social networks~\cite{HNkais13}).
+% \begin{TODO}
+% \begin{JEREMY}
+% Travis: Add reference to Cecilia and Gonzalo's work on this
+% \end{JEREMY}
+% \end{TODO}. 
+On the other hand, faster support for operators of a compressed data structure will yield faster algorithms on it, if the right operators are optimized.
+%
+A better understanding of the applications of a specific algorithmic problem or of a specific data structure will generate a tailored definition of the problem, on which a fine-grained analysis can be applied to optimize this particular application.
+
+% \begin{TODO}
+% \begin{JEREMY}
+% Travis: feel free to overwrite my writing if you have anything you think is better.
+% \end{JEREMY}
+% \end{TODO}
+
+
+
+%\subsubsection{Impact on the Research Community}
+\subsubsection{Impact}
+\label{sec:impact}
+
+It is our hope that such a gathering of researchers from complementary fields of research will produce not only new scientific results in the short term, but also more coherent research in the future (i.e. avoiding to reinvent the same technique or result multiple times). We hope that this seminar will promote
+\begin{itemize}
+\item a compendium of analysis techniques for both algorithms and data structures; 
+\item a compendium of dual results between algorithms and data structures; and
+\item the constitution of a subgroup of researchers who wish to collaborate on a book about ``Fine-Grained Analysis Techniques and Results on Algorithms and Data Structures''.
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Potential Structure}
+
+The proposed workshop aims at bringing together researchers from both fine-grained analysis of algorithms and data structures. At a more detailed view, there are the four mentioned subareas of adaptive algorithms, parameterized complexity, compressed data structures, and compressed indices. We will follow the following tentative program:
+\begin{itemize}
+ \item Monday+Tuesday: Two tutorials per day and a session for open problems and project ideas.
+ \item Wednesday: Contributed talks, free interaction time, excursion.
+ \item Thursday: Contributed talks, free interaction time.
+ \item Friday: Contributed talks, updates on open problems/projects.
+\end{itemize}
+
+Since most researchers will have a good understanding of at most two subareas, we want to start the seminar week by having four tutorials on the subareas on Monday and Tuesday. The tutorials will range between 60 and 90 minutes per topic and will be given by one or two people (guest or organizer) each. The topics and speakers will be assigned ahead of time in function of the final list of participants. Furthermore, there will be open problem sessions on both Monday and Tuesday where people can suggest not only established open problems but in particular also ideas for crossover projects that could be initiated during the week.
+
+For the remaining three days we propose a lighter program of not too many short contributed talks and ample of free time for discussion and interaction. We plan sessions for 20 min.\ contributed talks of the key ideas of recent results. Additionally, we will strongly encourage contributed talks that present key techniques or project ideas in more detail. This will have a more flexible time limit of 10-30 min.\ and sessions will have larger breaks for questions and discussions. The talk concept will be announced early and an initial program will be drafted before the beginning of the seminar, such that no one need prepare a presentation during the seminar.
+
+
+
+%SK: begin previous proposed structure
+% We propose the following structure for the seminar:
+% 
+% \begin{itemize}
+% \item On the first day, $4$ participants will be required to give each a 1h introduction talk about one of the following topics:
+%   \begin{enumerate}
+% \item Compressed Data Structures
+% \item Compressed Indices
+% \item Fine-Grained Analysis of Polynomial Algorithms
+% \item Parameterized Complexity of \NP-Hard Problems
+%   \end{enumerate}
+% \item During the four remaining days, 
+%   \begin{itemize}
+% \item each participant will be offered the occasion to give a 10mns talk about a problem or technique from their research topic (e.g. data compression) which they believe is related to a complementary topic (e.g. algorithm design), 
+% \item with ample time (e.g. 10 mns and regular breakout sessions) between such presentations for discussions about the merits of the proposal.
+%   \end{itemize}
+% \end{itemize}
+%SK: end previous proposed structure
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%SK: slightly rephrased suggestion below (original follows in comments)
+
+\section{Relation to previous seminars}
+
+This seminar is a follow-up to \texttt{Dagstuhl Seminar 09171} (April 19-24, 2009) on the topic of ``\emph{Adaptive, Output Sensitive, Online and Parameterized Algorithms}''\footnote{\url{http://www.dagstuhl.de/en/program/calendar/semhp/?semnr=09171}}, organized by J{\'e}r{\'e}my Barbay (co-author of this proposal), Rolf Klein, Alejandro L\'opez-Ortiz, and Rolf Niedermeier (all in the list of potential participants). This time, we focus on the shared interest in input structure and classical analysis refined by structural parameters. Accordingly, from the algorithms community we mainly invite researchers from adaptive algorithms and parameterized complexity, and invite an about equal number of researchers from the area of data structures that focus on compressed data structures and compressed indices. We expect that this creates a more fertile ground for interaction, based on similar perspectives on both avoiding worst-case bounds and considering problems together with structural measures/parameters.
+
+This seminar complements the recent \texttt{Complexity 2015} workshop (August 19- December 18, 2015) organized in Berkeley\footnote{\url{https://simons.berkeley.edu/programs/complexity2015}} on the theme of ``\emph{Fine-Grained Analysis}'', and the \texttt{Dagstuhl Seminar 16431} (October 23--28, 2016) on ``\emph{Computation over Compressed Structured Data}''.\footnote{\url{http://www.dagstuhl.de/en/program/calendar/semhp/?semnr=16431}} The former covered the parameterized complexity of NP-hard problems and the worst-case complexity of polynomial-time problems, but not really the parameterized complexity of polynomial-time problems; the latter will not cover NP-hard problems nor any kind of parameterized complexity of algorithms.  We will consider 1) a wide range of parameterized complexity results on problems solvable in polynomial times, and 2) a different set of problems with Compressed Data Structures and Indices.
+
+Stefan Kratsch was on the organizing team of \texttt{Dagstuhl Seminar 14451} (November 2--7, 2014) on ``\emph{Optimality and tight results in parameterized complexity}''\footnote{\url{http://www.dagstuhl.de/de/programm/kalender/semhp/?semnr=14451}}, which focused on getting tight bounds for parameterized algorithms and kernelization, similar to the mentioned \texttt{Complexity 2015} workshop. This seminar, and preceding seminars on parameterized complexity (Seminars 12241, 09511, and 07281), were aimed at current results and trends in parameterized complexity rather than outreach to adaptive algorithms or data structures.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% \section{Relation to previous seminars}
+% 
+% This seminar is a follow-up to the \texttt{Dagstuhl Seminar 09171} (April 19-24, 2009) on the topic of ``\emph{Adaptive, Output Sensitive, Online and Parameterized Algorithms}''\footnote{\url{http://www.dagstuhl.de/en/program/calendar/semhp/?semnr=09171}}, organized by J{\'e}r{\'e}my Barbay (co-author of this proposal), Rolf Klein, Alejandro L\'opez-Ortiz, and Rolf Niedermeier (all in the list of potential participants). Albeit not all the themes are mentioned in the title of the proposal (e.g. \emph{output sensitivity} and \emph{competitive ratio} of online algorithms), this second seminar encompasses the same themes from the analysis of algorithms, adding to it the themes of compressed data structures and compressed indices from data structure research. The idea is that this brings together researchers with a shared interest in input structure and classical analysis refined by structural parameters.
+% 
+% This seminar complements the recent \texttt{Complexity 2015} workshop organized in Berkeley\footnote{\url{https://simons.berkeley.edu/programs/complexity2015}} on the theme of ``Fine-Grained Analysis'', and the \texttt{Dagstuhl Seminar 16431} (October 23--28, 2016) on ``Computation over Compressed Structured Data''.\footnote{\url{http://www.dagstuhl.de/en/program/calendar/semhp/?semnr=16431}}  The former covered the parameterized complexity of NP-hard problems and the worst-case complexity of polynomial-time problems, but not really the parameterized complexity of polynomial-time problems; the latter will not cover NP-hard problems.  We will consider 1) a wide range of parameterized complexity results on problems solvable in polynomial times, and 2) a different set of problems with Compressed Data Structures and Indices.
+% 
+% Stefan Kratsch was on the organizing team of \texttt{Dagstuhl Seminar 14451} (November 2--7, 2014) on ``\emph{Optimality and tight results in parameterized complexity}''\footnote{\url{http://www.dagstuhl.de/de/programm/kalender/semhp/?semnr=14451}}, which focused on getting tight bounds for parameterized algorithms and kernelization. This seminar, and preceding seminars on parameterized complexity (Seminars 12241, 09511, and 07281), were aimed at current results and trends in parameterized complexity rather than outreach to other branches of computer science.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Information about the organizers}
+
+% Each organizer should provide a $0.5-1$ page research CV that gives an overview of an organizer’s academic career and especially points out community services and recognitions. However, it should not list every paper ever published as the five most relevant papers are sufficient.
+
+\subsection*{J\'er\'emy Barbay}
+
+%  Dr. J\'er\'emy Barbay
+%   \begin{itemize}
+% \item Institution: University of Chile (Chile)
+% \item Postal Address: 
+%   Oficina 303, 
+%   Edificio Norte, Piso 3, 
+%   Avenida Beauchef 851, 
+%   837-0456 Santiago, 
+%   Chile.
+% \item Phone:  +56-2-2978-4365
+% \item Fax: +56-2-2689-5531
+% \item mailto:jbarbay@dcc.uchile.cl
+% \item Home Page: http://barbay.cl
+%   \end{itemize}
+
+\begin{multicols}{2}
+\noindent Assistant professor at the University of Chile, \\
+% \texttt{http://barbay.cl}\\
+Email: \texttt{jeremy@barbay.cl} \\
+Phone:  +56-2-2978-4365\\
+Fax: +56-2-2689-5531
+\begin{tabbing}
+Address: \= University of Chile\\
+%\> Oficina 303, Edificio Norte, Piso 3\\
+\> Departamento de Ciencias de la Computación, \\
+\> Avenida Beauchef 851, 837-0456 Santiago\\
+\> Chile
+\end{tabbing}
+\end{multicols}
+
+J\'er\'emy Barbay received his PhD in Computer Science at the ``Laboratoire de Recherche en Informatique'' of the ``University of Orsay'' in 2002, under the supervision of Claire Mathieu.  He was a postdoctoral fellow at the department of Computer Science of the University of British Columbia until 2004, and an assistant professor at the Cheriton School of Computer Science of the University of Waterloo until 2008. He is a professor at the department of Computer Science of the University of Chile in Santiago, Chile since 2008.
+%
+J\'er\'emy Barbay's main research is about the analysis of algorithms and data-structures on finer classes of instances than those merely defined by their size, which yields the concepts of adaptive (analysis of) algorithms, instance optimality, output sensitive and parameterized complexity, compressed data structures and indexes, and of formal measures of compressibility.  His work has contributed, among others, to clarify the relations between those topics and has introduced a few useful concepts, such as the direct relation between permutation compression and adaptive sorting~\cite{2013-TCS-CompressedRepresentationsOfPermutationsAndApplications-BarbayNavarro};
+% the first compressed index achieving space within $o(n H_k) + O(n)$ instead of merely within $o(n \lg \sigma)$~\cite{2014-Algorithmica-EfficientFullyCompressedSequenceRepresentations-BarbayClaudeGagieNavarroNekrich} (in collaboration with Travis Gagie, co-author of this seminar proposal); Succinct Indexes~\cite{2011-TALG-SuccinctIndexesForStringsBinaryRelationsAndMultiLabeledTrees-BarbayHeMunroRao};
+ and (input order oblivious) Instance Optimality in Computational Geometry \cite{2009-FOCS-InstanceOptimalGeometricAlgorithms-AfshaniBarbayChan}. 
+
+\paragraph{Related publications:}
+\begin{enumerate}
+\item
+P.~Afshani, J.~Barbay, and T.~M. Chan.
+\newblock Instance-optimal geometric algorithms.
+\newblock In {\em Proceedings of the Annual IEEE Symposium on Foundations of
+  Computer Science (FOCS)}, pages 129--138. IEEE Computer Society, 2009.
+
+\item
+J.~Barbay, F.~Claude, T.~Gagie, G.~Navarro, and Y.~Nekrich.
+\newblock Efficient fully-compressed sequence representations.
+\newblock {\em Algorithmica}, 69(1):232--268, 2014.
+
+\item
+J.~Barbay, J.~Fischer, and G.~Navarro.
+\newblock {LRM}-trees: Compressed indices, adaptive sorting, and compressed
+  permutations.
+\newblock {\em {ELSEVIER} Theoretical Computer Science ({TCS})}, 459:26--41,
+  2012.
+
+\item
+J.~Barbay, M.~He, J.~I. Munro, and S.~R. Satti.
+\newblock Succinct indexes for strings, binary relations and multilabeled
+  trees.
+\newblock {\em ACM Transactions on Algorithms ({TALG})} , 7(4):52, 2011.
+
+\item
+J.~Barbay and G.~Navarro.
+\newblock On compressing permutations and adaptive sorting.
+\newblock {\em Theoretical Computer Science ({TCS})}, 513:109--123, 2013.
+\end{enumerate}
+
+% \subsection*{Travis Gagie}
+
+% % Dr. Travis Gagie
+% %   \begin{itemize}
+% % \item Institution: University of Helsinki (Finland)
+% % \item Postal Address: Department of Computer Science, 00014 University of Helsinki, Finland.
+% % \item Phone: +358 294151401
+% % \item Fax: +358 98764314
+% % \item mailto:travis.gagie@gmail.com
+% % \item Home Page: http://www.cs.helsinki.fi/u/gagie/
+% %   \end{itemize}
+
+% \begin{multicols}{2}
+% \noindent Postdoc at the University of Helsinki, \\
+% % \texttt{http://www.cs.helsinki.fi/u/gagie/}\\
+% Email: \texttt{travis.gagie@gmail.com} \\
+% Phone: +358 294151401\\
+% Fax: +358 98764314
+% \begin{tabbing}
+% Address: \=  University of Helsinki\\
+% \> Department of Computer Science\\
+% \> 00014 University of Helsinki\\
+% \> Finland
+% \end{tabbing}
+% \end{multicols}
+
+% Travis Gagie is a researcher and docent at the University of Helsinki, on a post-doctoral grant from the Academy of Finland.  He is a member of Veli M\"akinen's Genome-Scale Algorithmics group, a member of the the Helsinki Institute for Information Technology and a docent at Aalto University.  He holds a BSc in Cognitive Science from Queen's University (Canada); an MSc in Computer Science from the University of Toronto, supervised by Faith Ellen; and a Dr.\ rer.\ nat.\ in Bioinformatics from Bielefeld University, supervised by Ferdinando Cicalese and Jens Stoye.  After his MSc he spent a year at the Italian National Research Council (CNR) in Pisa and two years at the University of Eastern Piedmont, supervised at both by Giovanni Manzini.  After his doctorate he spent a year working with Gonzalo Navarro at the University of Chile and two years working with Jorma Tarhio at Aalto.  He is or has been on the program or organizing committees of the Symposium on Combinatorial Pattern Matching (CPM) in 2011, '12, '13 and '15, the Data Compression Conference (DCC) in 2014, '15 and '16, and the Symposium on String Processing and Information Retrieval (SPIRE) in 2015.  He co-chaired the 2015 Workshop on Compression, Text and Algorithms.  He studies compressed data structures and algorithms for string processing and data compression, and has taught several courses on these topics.
+
+% \paragraph{Related publications:}
+% \begin{enumerate}
+% \item D.~Belazzougui, T.~Gagie, P.~Gawrychowski, J.~K\"arkk\"ainen, A.~Ord\'o\~nez Pereira, S.~J.~Puglisi and Y.~Tabei.
+% \newblock Queries on LZ-Bounded encodings.
+% \newblock In {\em Proceedings of the Data Compression Conference (DCC)} pages 83-–92. IEEE, 2015.
+
+% \item T.~Gagie, P.~Gawrychowski and S.~J.~Puglisi.
+% \newblock Approximate pattern matching in LZ77-compressed texts.
+% \newblock {\em Journal of Discrete Algorithms}, 32:64--68, 2015.
+
+% \item T.~Gagie and S.~J.~Puglisi.
+% \newblock Searching and indexing genomic databases via kernelization.
+% \newblock {\em Frontiers in Bioengineering and Biotechnology}, 3, 2015.
+
+% \item D.~Belazzougui, T.~Gagie, S.~Gog, G.~Manzini and J.~Sir\'en.
+% \newblock Relative FM-indexes.
+% \newblock In {\em Proceedings of the Symposium on String Processing and Information Retrieval (SPIRE)}, pages 52--64. Springer, 2014.
+
+% \item
+% J.~Barbay, F.~Claude, T.~Gagie, G.~Navarro, and Y.~Nekrich.
+% \newblock Efficient fully-compressed sequence representations.
+% \newblock {\em Algorithmica}, 69(1):232--268, 2014.
+% \end{enumerate}
+
+% \subsection*{Simon Gog}
+
+% % Dr. Simon Gog
+% %   \begin{itemize}
+% % \item Institution: Karlsruhe Institute of Technology (Germany)
+% % \item Postal Address:
+% %    Institute of Theoretical Informatics, 
+% %    Am Fasanengarten 5,
+% %    76131 Karlsruhe,
+% %    Germany.
+% % \item Phone: +49 721 608-46781
+% % \item Fax: +49 721 608-43088
+% % \item mailto: gog@kit.edu
+% % \item Home Page: 
+% %   \end{itemize}
+
+% \begin{multicols}{2}
+% \noindent Postdoc at the Karlsruhe Institute of Technology, \\
+% % \texttt{homepage}\\
+% Email: \texttt{gog@kit.edu} \\
+% Phone: +49 721 608-46781\\
+% Fax: +49 721 608-43088
+% \begin{tabbing}
+% Address: \= Karlsruhe Institute of Technology\\
+% \>   Institute of Theoretical Informatics\\
+% \>   Am Fasanengarten 5\\
+% \>   D-76131 Karlsruhe
+% \end{tabbing}
+% \end{multicols}
+
+% Simon Gog received his PhD in Computer Science at the Institute of Theoretical Computer Science
+% of Ulm University, Germany, in 2011. From 2012 to 2014 he worked as a postdoctoral research
+% fellow at the Department of Computing and Information Systems of the University of Melbourne,
+% Australia. Since July 2014 he does research and teaching in the algorithm group of Peter Sanders
+% at the Karlsruhe Institute of Technology. 
+% Simon Gog's main research areas are [compact/compressed/succinct] data structures with a focus
+% on algorithm engineering. During his PhD studies he designed an improved version of compressed
+% suffix trees and proposed the compact affix tree. He is the creator and maintainer of the
+% popular \href{https://github.com/simongog/sdsl-lite}{Succinct Data Structure Libary (SDSL)}
+% which is a basic building block of projects in the area of Bioinformatics,
+% Information Retrieval and Natural Language Processing.
+% In the last two years he served in the program committees of ISAAC 2014, SIGIR 2014, CIKM 2015, and
+% SPIRE 2015.
+% % and regularly serves as referee in international conferences and journals.
+
+% \paragraph{Related publications:}
+% \begin{enumerate}
+% \item S.~Gog, T.~Beller, A.~Moffat, M.~Petri.
+% \newblock From Theory to Practice: Plug and Play with Succinct Data Structures.
+% \newblock {\em Proc. of SEA}, 326-337, 2014.
+% \item
+% S.~Gog, G.~Navarro.
+% \newblock Improved Single-Term Top-$k$ Document Retrieval.
+% \newblock {\em Proc. of ALENEX}, 24-32, 2015.
+% \item 
+% S.~Gog, K.~Karhu, J.~K\"arkk\"ainen, V.~M\"akinen, N.~V\"alim\"aki.
+% \newblock Multi-pattern matching with bidirectional indexes
+% \newblock {\em Journal of Discrete Algorithms}, 24, 26--39, 2014.
+% \item S.~Gog, J.~Fischer.
+% \newblock Advantages of shared data structures for sequences of balanced parentheses.
+% \newblock {\em Proc. of DCC}, 406-415, 2010.
+% \item S.~Gog, M.~Petri.
+% \newblock Optimized Succinct Data Structures for Massive Data.
+% \newblock {\em Software, Practice and Experience}, 44(11), 1287-314, 2014.
+% \end{enumerate}
+
+% %\pagebreak[4]
+% \subsection*{Stefan Kratsch}
+
+% % Dr. Stefan Kratsch
+% %   \begin{itemize}
+% % \item Institution: University of Bonn (Germany)
+% % \item Postal Address: Institut f\"ur Informatik I, Friedrich-Ebert-Allee 144, 53113 Bonn, Germany.
+% % \item Phone: +49 228 73-4554
+% % \item Fax: +49 228 73-4321 
+% % \item mailto: kratsch@cs.uni-bonn.de
+% % \item Home Page: http://www.i1.informatik.uni-bonn.de/doku.php?id=staff:stefankratsch
+% %   \end{itemize}
+
+% \begin{multicols}{2}
+% \noindent Professor at the University of Bonn, \\
+% Email: \texttt{kratsch@cs.uni-bonn.de} \\
+% Phone: +49 228 73-4554\\
+% Fax: +49 228 73-4321
+% \begin{tabbing}
+% Address: \= Universit\"at Bonn\\
+% \> Institut f\"ur Informatik I\\
+% \> Friedrich-Ebert-Allee 144\\
+% \> D-53113 Bonn
+% \end{tabbing}
+% \end{multicols}
+
+% Stefan Kratsch received his PhD in 2010 from the Max-Planck-Institute for Informatics, Saarbr\"ucken, in Germany. He then was a postdoc in Utrecht (2 years) and at MPI Saarbr\"ucken (2 months). From 2012 till 2014 he was a junior research group leader at Berlin Technical University. Since January 2015 he is a professor at the University of Bonn.
+
+% Stefan Kratsch's main research area is parameterized complexity, which focuses on a fine-grained study of the complexity of \NP-hard problems by taking into account not only the input size but also parameters like solution size or structural measures. Within this field, his main interest is kernelization, i.e., the study of efficient algorithms that preprocess given instances to a size bounded by a function of the considered parameters. His work has, among others, contributed new techniques for both upper and lower bounds for kernelization and faster algorithms for problems on graphs of bounded treewidth. He served on program committees of IPEC 2015, MFCS 2014, STACS 2014, ISAAC 2013, FSTTCS 2012, and IPEC 2012, and recently joined IPEC's steering committee.
+
+% \paragraph{Related publications:}
+% \begin{enumerate}
+% \item H.L.~Bodlaender, M.~Cygan, S.~Kratsch, and J.~Nederlof. \newblock Deterministic single exponential time algorithms for connectivity problems parameterized by treewidth. \newblock \emph{Inf. Comput.}, 243:86-111, 2015.
+% \item H.L.~Bodlaender, B.M.P.~Jansen, and S.~Kratsch. \newblock Kernelization Lower Bounds by Cross-Composition. \newblock \emph{{SIAM} J. Discrete Math.}, 28(1):277--305, 2014.
+% \item S.~Kratsch, G.~Philip, and S.~Ray. \newblock Point Line Cover: The Easy Kernel is Essentially Tight. \newblock In \emph{Proceedings of Symposium on Discrete Algorithms (SODA)}:1596-1606. SIAM, 2014.
+% \item S.~Kratsch. \newblock On Polynomial Kernels for Integer Linear Programs: Covering, Packing and Feasibility. \newblock In \emph{Proceedings of European Symposium on Algorithms (ESA)}:647-658. Springer, 2013.
+% \item S.~Kratsch and M.~Wahlstr\"om. \newblock Representative Sets and Irrelevant Vertices: New Tools for Kernelization. \newblock In \emph{Proceedings of the Annual IEEE Symposium on Foundations of
+%   Computer Science (FOCS)}:450-459. IEEE Computer Society, 2012.
+% \end{enumerate}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%  BIBLIO  %%%%%%%%%%%%
+\newpage
+\bibliographystyle{abbrv}
+% unsrt to have [1]unsorted, plain to have [1] sorted, alpha to have something horrible, 
+% abbrv to have the same but shorter
+\bibliography{biblio-Barbay,publications-Barbay,stefan}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\newpage
+%\section{List of potential participants}
+% Do NOT add guests in the list below: better add them to the list in the orgmode format, from which it can be easily exported to both Latex and csv format.
+%\begin{sidewaystable}
+ \vspace{-0.07cm}
+{\footnotesize
+\begin{tabular}{@{}l@{\hspace{0.215cm}}l@{\hspace{0.215cm}}l@{\hspace{0.215cm}}l@{\hspace{0.215cm}}l@{\hspace{0.215cm}}c@{\hspace{0.215cm}}c@{\hspace{0.215cm}}c@{}}
+\toprule
+  \begin{tabular}{@{}l}First\\Name\end{tabular} & \begin{tabular}{@{}l}Last\\Name\end{tabular} & Institution                              & Country     & Email                              & Area      & \begin{tabular}{@{}c@{}}PhD\\Year\end{tabular} & Gender \\                                                                               
+\midrule
+J\'er\'emy       & Barbay           & University of Chile                      & Chile       & jeremy@barbay.cl                   & Both &          & man   \\
+Travis       & Gagie            & University of Helsinki                   & Finland     & travis.gagie@gmail.com             & Data      &          & man   \\
+Simon        & Gog              & Karlsruhe Institute of Technology        & Germany     & gog@kit.edu                        & Data      & 2011     & man   \\
+Stefan       & Kratsch          & University of Bonn                       & Germany     & kratsch@cs.uni-bonn.de             & Algo      & 2010     & man   \\
+\midrule %SK: booktabs > standard tables
+Hideo        & Bannai           & Kyushu University                        & Japan       & bannai@inf.kyushu-u.ac.jp          & Data      &          & man   \\
+Djamal       & Belazzougui      & CERIST                                   & Algeria     & djamal.belazzougui@gmail.com       & Data      & 2011     & man   \\
+Philip       & Bille            & Technical University of Denmark          & Denmark     & phbi@dtu.dk                        & Data      &          & man   \\
+Karl         & Bringmann        & ETH Zürich                               & Switzerland & karl.bringmann@inf.ethz.ch         & Algo      & 2014     & man   \\
+Luca         & Castelli Aleardi & \'Ecole Polytechnique de Paris           & France      & amturing@lix.polytechnique.fr      & Both &          & man   \\
+Timothy      & M. Chan          & University of Waterloo                   & Canada      & tmchan@cs.uwaterloo.ca             & Algo      &          & man   \\
+Marek        & Cygan            & University of Warsaw                     & Poland      & cygan@mimuw.edu.pl                 & Algo      & 2012     & man   \\
+Holger       & Dell             & Saarland University                      & Germany     & hdell@mmci.uni-saarland.de         & Algo      & 2011     & man   \\
+Reza         & Dorrigiv         & Dalhousie University                     & Canada      & rdorrigiv@cs.dal.ca                & Algo      & 2010     & man   \\
+Stephane     & Durocher         & University of Manitoba                   & Canada      & durocher@cs.umanitoba.ca           & Both &          & man   \\
+  Amr        & Elmasry          & Alexandria University                    & Egypt       & elmasry@alexu.edu.eg               & Data      &          & man   \\
+Johannes     & Fischer          & Dortmund University                      & Germany     & johannes.fischer@cs.tu-dortmund.de & Data      &          & man   \\
+Allyx        & Fontaine         & University of Bristol                    & England     & allyx.fontaine@bristol.ac.uk       & Algo      & 2014     & woman \\
+Pawel        & Gawrychowski     & University of Wrocław                    & Poland      & gawry@cs.uni.wroc.pl               & Data      & 2011     & man   \\
+Inge         & Li Gortz         & Technical University of Denmark          & Denmark     & inge@dtu.dk                        & Data      &          & woman \\
+Fabrizio     & Grandoni         & Università della Svizzera italiana       & Switzerland & fabrizio@idsia.ch                  & Algo      &          & man   \\
+Martin       & Grohe            & RWTH Aachen                              & Germany     & grohe@informatik.rwth-aachen.de    & Algo      &          & man   \\
+Cecilia      & Hernandez        & Universidad de Concepcion                & Chile       & chernand@gmail.com                 & Both & 2015     & woman \\
+Shunsuke     & Inenaga          & Kyushu University                        & Japan       & inenaga@inf.kyushu-u.ac.jp         & Data      &          & man   \\
+Bart M. P.   & Jansen           & \begin{tabular}{@{}l}Eindhoven University\\of Technology\end{tabular}       & Netherlands & b.m.p.jansen@tue.nl                & Algo      & 2013     & man   \\
+Artur        & Jez              & \begin{tabular}{@{}l}Max-Planck-Institut\\f\"ur Informatik\end{tabular}     & Germany     & aje@cs.uni.wroc.pl                 & Both & 2010     & man   \\
+Petteri      & Kaski            & Aalto University                         & Finland     & petteri.kaski@aalto.fi             & Algo      &          & man   \\
+David G.     & Kirkpatrick      & University of British Columbia           & Canada      & kirk@cs.ubc.ca                     & Algo      &          & man   \\
+Rolf         & Klein            & University of Bonn                       & Germany     & rolf.klein@uni-bonn.de             & Algo      &          & man   \\
+Christian    & Knauer           & University of Bayreuth                   & Germany     & christian.knauer@uni-bayreuth.de   & Algo      &          & man   \\
+Tomasz       & Kociumaka        & University of Warsaw                     & Poland      & kociumaka@mimuw.edu.pl             & Both & 2017     & man   \\
+Susana       & Ladra            & Universidad de Corunia                   & Spain       & sladra@udc.es                      & Data      & 2011     & woman \\
+Christos     & Levcopoulos      & Lund University                          & Sweden      & christos@cs.lth.se                 & Algo      &          & man   \\
+Markus       & Lohrey           & University of Siegen                     & Germany     & lohrey@eti.uni-siegen.de           & Both &          & man   \\
+Daniel       & Lokshtanov       & University of Bergen                     & Norway      & daniello@ii.uib.no                 & Algo      &          & man   \\
+Alejandro    & L\'opez Ortiz      & University of Waterloo                   & Canada      & alopez-o@uwaterloo.ca              & Algo      &          & man   \\
+Sebastian    & Maneth           & University of Edinburgh                  & England     & smaneth@inf.ed.ac.uk               & Data      &          & man   \\
+Daniel       & Marx             & Hungarian Academy of Sciences            & Hungary     & dmarx@cs.bme.hu                    & Algo      &          & man   \\
+Kurt         & Mehlhorn         & \begin{tabular}{@{}l}Max-Planck-Institut\\f\"ur Informatik\end{tabular}     & Germany     & mehlhorn@mpi-inf.mpg.de            & Both &          & man   \\
+Neeldhara    & Misra            & IIT Gandhinagar                          & India       & neeldhara.misra@gmail.com          & Algo      & 2012     & woman \\
+J. Ian       & Munro            & University of Waterloo                   & Canada      & imunro@uwaterloo.ca                & Both &          & man   \\
+Alistair     & Moffat           & University of Melbourne                  & Australia   & ammoffat@unimelb.edu.au            & Data      &          & man   \\
+Gonzalo      & Navarro          & Universidad de Chile                     & Chile       & gnavarro@dcc.uchile.cl             & Both &          & man   \\
+Yakov        & Nekrich          & University of Waterloo                   & Canada      & ynekrich@uwaterloo.ca              & Data      &          & man   \\
+Rolf         & Niedermeier      & TU Berlin                                & Germany     & rolf.niedermeier@tu-berlin.de      & Algo      &          & man   \\
+Carlos       & Ochoa            & Universidad de Chile                     & Chile       & cochoa@dcc.uchile.cl               & Algo      & 2016     & man   \\
+Yoshio       & Okamato          & \begin{tabular}{@{}l}The University of\\Electro-Communications\end{tabular}  & Japan       & okamotoy@uec.ac.jp                 & Algo      &          & man   \\
+Nicola       & Prezza           & University of Udine                      & Italy       & prezza.nicola@spes.uniud.it        & Data      & 2016     & man   \\
+Simon        & Puglisi          & University of Helsinki                   & Finland     & puglisi@cs.helsinki.fi             & Data      &          & man   \\
+Rajeev       & Raman            & University of Leicester                  & England     & r.raman@leicester.ac.uk            & Data      &          & man   \\
+Javiel       & Rojas            & Universidad de Chile                     & Chile       & jrojas@dcc.uchile.cl               & Algo      & 2016     & man   \\
+Vladimir     & Shchur           & Wellcome Trust Sanger Institute          & England     & 3@sanger.ac.uk                     & Data      & 2013     & man   \\
+Raimund      & Seidel           & Saarland University                      & Germany     & rseidel@cs.uni-saarland.de         & Algo      &          & man   \\
+Jouni        & Siren            & Sanger Institute                         & England     & jouni.siren@sanger.ac.uk           & Data      & 2012     & man   \\
+Tatiana      & Starikovskaya    & University of Bristol                    & England     & tat.starikovskaya@gmail.com        & Both & 2012     & woman \\
+Robert E.    & Tarjan           & Princeton University                     & USA         & ret@cs.princeton.edu               & Both &          & man   \\
+Sharma V.    & Thankachan       & Georgia Institute of Technology          & USA         & sharma.thankachan@gatech.edu       & Data      & 2014     & man   \\
+Virginia     & V. Williams      & Stanford                                 & USA         & virgi@cs.stanford.edu              & Algo      &          & woman \\
+Rossano      & Venturini        & University of Pisa                       & Italy       & rossano.venturini@unipi.it         & Data      &          & man   \\
+Sebastiano   & Vigna            & University of Milano                     & Italy       & vigna@di.unimi.it                  & Data      &          & man   \\
+Gerhard      & Woeginger        & \begin{tabular}{@{}l}Eindhoven University\\of Technology\end{tabular}        & Netherlands & g.woeginger@tue.nl                 & Algo      &          & man   \\
+\bottomrule
+\end{tabular}
+}
+%\end{sidewaystable}
+
+% %\begin{sidewaystable}
+% \begin{center}
+% \small
+% \begin{longtable}{@{\makebox[1em][r]{\rownumber\space}} | p{1.2cm}p{1.5cm}p{3cm}lp{3.4cm}cccc}
+%   First Name & Last Name        & Institution                              & Country     & Email                              & Area      & PhD year & Gender 
+%   \gdef\rownumber{\stepcounter{magicrownumbers}\arabic{magicrownumbers}}                                                                                     \\
+%   \hline
+% J\'er\'emy       & Barbay           & University of Chile                      & Chile       & jeremy@barbay.cl                   & Algo+Data &          & man   \\
+% Travis       & Gagie            & University of Helsinki                   & Finland     & travis.gagie@gmail.com             & Data      &          & man   \\
+% Simon        & Gog              & Karlsruhe Institute of Technology        & Germany     & gog@kit.edu                        & Data      & 2011     & man   \\
+% Stefan       & Kratsch          & University of Bonn                       & Germany     & kratsch@cs.uni-bonn.de             & Algo      & 2010     & man   \\
+% Hideo        & Bannai           & Kyushu University                        & Japan       & bannai@inf.kyushu-u.ac.jp          & Data      &          & man   \\
+% Djamal       & Belazzougui      & CERIST                                   & Algeria     & djamal.belazzougui@gmail.com       & Data      & 2011     & man   \\
+% Philip       & Bille            & Technical University of Denmark          & Denmark     & phbi@dtu.dk                        & Data      &          & man   \\
+% Karl         & Bringmann        & ETH Zürich                               & Switzerland & karl.bringmann@inf.ethz.ch         & Algo      & 2014     & man   \\
+% Luca         & Castelli Aleardi & \'Ecole Polytechnique de Paris           & France      & amturing@lix.polytechnique.fr      & Algo+Data &          & man   \\
+% Timothy      & M. Chan          & University of Waterloo                   & Canada      & tmchan@cs.uwaterloo.ca             & Algo      &          & man   \\
+% Marek        & Cygan            & University of Warsaw                     & Poland      & cygan@mimuw.edu.pl                 & Algo      & 2012     & man   \\
+% Holger       & Dell             & Saarland University                      & Germany     & hdell@mmci.uni-saarland.de         & Algo      & 2011     & man   \\
+% Reza         & Dorrigiv         & Dalhousie University                     & Canada      & rdorrigiv@cs.dal.ca                & Algo      & 2010     & man   \\
+% Stephane     & Durocher         & University of Manitoba                   & Canada      & durocher@cs.umanitoba.ca           & Algo+Data &          & man   \\
+%   Amr        & Elmasry          & Alexandria University                    & Egypt       & elmasry@alexu.edu.eg               & Data      &          & man   \\
+% Johannes     & Fischer          & Dortmund University                      & Germany     & johannes.fischer@cs.tu-dortmund.de & Data      &          & man   \\
+% Allyx        & Fontaine         & University of Bristol                    & England     & allyx.fontaine@bristol.ac.uk       & Algo      & 2014     & woman \\
+% Pawel        & Gawrychowski     & University of Wrocław                    & Poland      & gawry@cs.uni.wroc.pl               & Data      & 2011     & man   \\
+% Inge         & Li Gortz         & Technical University of Denmark          & Denmark     & inge@dtu.dk                        & Data      &          & woman \\
+% Fabrizio     & Grandoni         & Università della Svizzera italiana       & Switzerland & fabrizio@idsia.ch                  & Algo      &          & man   \\
+% Martin       & Grohe            & RWTH Aachen                              & Germany     & grohe@informatik.rwth-aachen.de    & Algo      &          & man   \\
+% Cecilia      & Hernandez        & Universidad de Concepcion                & Chile       & chernand@gmail.com                 & Algo+Data & 2015     & woman \\
+% Shunsuke     & Inenaga          & Kyushu University                        & Japan       & inenaga@inf.kyushu-u.ac.jp         & Data      &          & man   \\
+% Bart M. P.   & Jansen           & Eindhoven University of Technology       & Netherlands & b.m.p.jansen@tue.nl                & Algo      & 2013     & man   \\
+% Artur        & Jez              & Max-Planck-Institut f\"ur Informatik     & Germany     & aje@cs.uni.wroc.pl                 & Algo+Data & 2010     & man   \\
+% Petteri      & Kaski            & Aalto University                         & Finland     & petteri.kaski@aalto.fi             & Algo      &          & man   \\
+% David G.     & Kirkpatrick      & University of British Columbia           & Canada      & kirk@cs.ubc.ca                     & Algo      &          & man   \\
+% Rolf         & Klein            & University of Bonn                       & Germany     & rolf.klein@uni-bonn.de             & Algo      &          & man   \\
+% Christian    & Knauer           & University of Bayreuth                   & Germany     & christian.knauer@uni-bayreuth.de   & Algo      &          & man   \\
+% Tomasz       & Kociumaka        & University of Warsaw                     & Poland      & kociumaka@mimuw.edu.pl             & Algo+Data & 2017     & man   \\
+% Susana       & Ladra            & Universidad de Corunia                   & Spain       & sladra@udc.es                      & Data      & 2011     & woman \\
+% Christos     & Levcopoulos      & Lund University                          & Sweden      & christos@cs.lth.se                 & Algo      &          & man   \\
+% Markus       & Lohrey           & University of Siegen                     & Germany     & lohrey@eti.uni-siegen.de           & Algo+Data &          & man   \\
+% Daniel       & Lokshtanov       & University of Bergen                     & Norway      & daniello@ii.uib.no                 & Algo      &          & man   \\
+% Alejandro    & Lopez Ortiz      & University of Waterloo                   & Canada      & alopez-o@uwaterloo.ca              & Algo      &          & man   \\
+% Sebastian    & Maneth           & University of Edinburgh                  & England     & smaneth@inf.ed.ac.uk               & Data      &          & man   \\
+% Daniel       & Marx             & Hungarian Academy of Sciences            & Hungary     & dmarx@cs.bme.hu                    & Algo      &          & man   \\
+% Kurt         & Mehlhorn         & Max-Planck-Institut f\"ur Informatik     & Germany     & mehlhorn@mpi-inf.mpg.de            & Algo+Data &          & man   \\
+% Neeldhara    & Misra            & IIT Gandhinagar                          & India       & neeldhara.misra@gmail.com          & Algo      & 2012     & woman \\
+% J. Ian       & Munro            & University of Waterloo                   & Canada      & imunro@uwaterloo.ca                & Algo+Data &          & man   \\
+% Alistair     & Moffat           & University of Melbourne                  & Australia   & ammoffat@unimelb.edu.au            & Data      &          & man   \\
+% Gonzalo      & Navarro          & Universidad de Chile                     & Chile       & gnavarro@dcc.uchile.cl             & Algo+Data &          & man   \\
+% Yakov        & Nekrich          & University of Waterloo                   & Canada      & ynekrich@uwaterloo.ca              & Data      &          & man   \\
+% Rolf         & Niedermeier      & TU Berlin                                & Germany     & rolf.niedermeier@tu-berlin.de      & Algo      &          & man   \\
+% Carlos       & Ochoa            & Universidad de Chile                     & Chile       & cochoa@dcc.uchile.cl               & Algo      & soon     & man   \\
+% Yoshio       & Okamato          & The University of Electro-Communications & Japan       & okamotoy@uec.ac.jp                 & Algo      &          & man   \\
+% Nicola       & Prezza           & University of Udine                      & Italy       & prezza.nicola@spes.uniud.it        & Data      & soon     & man   \\
+% Simon        & Puglisi          & University of Helsinki                   & Finland     & puglisi@cs.helsinki.fi             & Data      &          & man   \\
+% Rajeev       & Raman            & University of Leicester                  & England     & r.raman@leicester.ac.uk            & Data      &          & man   \\
+% Javiel       & Rojas            & Universidad de Chile                     & Chile       & jrojas@dcc.uchile.cl               & Algo      & soon     & man   \\
+% Vladimir     & Shchur           & Wellcome Trust Sanger Institute          & England     & 3@sanger.ac.uk                     & Data      & 2013     & man   \\
+% Raimund      & Seidel           & Saarland University                      & Germany     & rseidel@cs.uni-saarland.de         & Algo      &          & man   \\
+% Jouni        & Siren            & Sanger Institute                         & England     & jouni.siren@sanger.ac.uk           & Data      & 2012     & man   \\
+% Tatiana      & Starikovskaya    & University of Bristol                    & England     & tat.starikovskaya@gmail.com        & Algo+Data & 2012     & woman \\
+% Robert E.    & Tarjan           & Princeton University                     & USA         & ret@cs.princeton.edu               & Algo+Data &          & man   \\
+% Sharma V.    & Thankachan       & Georgia Institute of Technology          & USA         & sharma.thankachan@gatech.edu       & Data      & 2014     & man   \\
+% Virginia     & V. Williams      & Stanford                                 & USA         & virgi@cs.stanford.edu              & Algo      &          & woman \\
+% Rossano      & Venturini        & University of Pisa                       & Italy       & rossano.venturini@unipi.it         & Data      &          & man   \\
+% Sebastiano   & Vigna            & University of Milano                     & Italy       & vigna@di.unimi.it                  & Data      &          & man   \\
+% Gerhard      & Woeginger        & Eindhoven University of Technology       & Netherlands & g.woeginger@tue.nl                 & Algo      &          & man   \\
+% \hline
+% \end{longtable}
+% \end{center}
+% %\end{sidewaystable}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+% \appendix
+
+% \section{Preliminary Results}
+% \label{sec:preliminaryResults}
+
+
+
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:
