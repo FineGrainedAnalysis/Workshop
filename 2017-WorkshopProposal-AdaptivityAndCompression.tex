@@ -54,7 +54,7 @@
 
 %SK: suggested new abstract; feel free to replace by old one (below) or to change in any desired way
 \begin{abstract}
-This seminar will bring together researchers from adaptive algorithms and parameterized complexity with those working on compressed data structures and compressed indices. While all of these subareas of algorithms and data structures, respectively, focus on ``going beyond the worst-case'' for classes of structurally restricted inputs, there has been very little interaction between them. The goal of the seminar is to foster this interaction by teaching one another the key techniques of ones areas, through tutorials and short talks, and then discussing open problems at the intersection of the areas in varying small groups; for example, the concept of treating problems together with some structural measure (like sortedness or treewidth) and reductions between such ``parameterized problems'' to understand relations and gain lower bounds. Similarly, fast algorithms relative to structural measures should benefit from a more informed (compressed) data structure design.
+This seminar will bring together researchers from adaptive algorithms and parameterized complexity with those working on compressed data structures and compressed indices. While all of these subareas of algorithms and data structures, respectively, focus on ``going beyond the worst-case'' for classes of structurally restricted inputs, there has been very little interaction between them. The goal of the seminar is to foster this interaction by teaching one another the key techniques of ones areas, through tutorials and short talks, and then discussing open problems at the intersection of the areas in varying small groups; for example, the concept of treating problems together with some structural measure (like sortedness or treewidth) and reductions between such ``parameterized problems'' to understand relations and obtain lower bounds. Similarly, fast algorithms relative to structural measures should benefit from a more informed (compressed) data structure design.
 \end{abstract}
 
 % \begin{abstract}
@@ -75,7 +75,7 @@ This seminar will bring together researchers from adaptive algorithms and parame
 \item Dr.\ J\'er\'emy Barbay, Assistant professor at the University of Chile, \textsc{Chile};
 \item Dr.\ Johannes Fischer, Professor at the Tecnische Universitad Dortmund, \textsc{Germany};
 \item Dr.\ Stefan Kratsch,  Professor at the University of Bonn, \textsc{Germany};
-\item Dr.\ Srinivasa Rao Sati, Professor at Seoul National  University,  \textsc{Korea}.
+\item Dr.\ Srinivasa Rao Satti, Professor at Seoul National  University,  \textsc{Korea}.
 \end{itemize}
 
 \subsubsection*{Type of event}
@@ -235,7 +235,7 @@ This event is meant to be a follow-up to the \texttt{Dagstuhl Seminar 09171} in 
 
 This application proposes a seminar bringing together two groups of researchers characterized, on the one hand, by research on algorithms which run faster on large families of instances than in the worst case over all instances of same size  (e.g. parameterized complexity and adaptive analysis of algorithms); and on the other hand, by research on data structures which use less space on large families of instances than in the worst case over all instances of same size (e.g. compressed data structures and compressed indices). 
 %
-Albeit those themes of research share a similar perspective of aiming ``beyond worst case analysis'' (over instances of fixed size), examples of work combining both approaches have been rare: we hope to change this by a joined seminar.  
+Albeit those themes of research share a similar perspective of aiming ``beyond worst case analysis'' (over instances of fixed size), examples of work combining both approaches have been rare: we hope to change this by a joint seminar.  
 %
 In Section \ref{sec:topics-seminar} we describe the two main topics of the seminar: the analysis of algorithms on one hand, and the analysis of data structures and indices on the other hand. In Section \ref{sec:objectives-seminar} we describe the two main objectives of the seminar: identifying and merging common techniques between the two topics, and identifying potential synergies.
 
@@ -312,7 +312,7 @@ These information theory lower bound is used as a baseline (or \emph{uncompresse
 \item A \emph{Data Structure} $\mathcal{D}$ is an encoding which supports various operators (e.g., a run encoding of permutations~\cite{2013-TCS-CompressedRepresentationsOfPermutationsAndApplications-BarbayNavarro} supporting the operators \texttt{access} and \texttt{inverse access}). Formally, it specifies how to encode data from some \emph{Data Type} {\dataType} (e.g., permutations) so as to support the operators specified by a given \emph{Abstract Data Type} {\abstractDataType} (e.g., \texttt{access} and \texttt{inverse access}).  By definition, any data structure supporting {\access}, and possibly some other operators, will use at least that much space as the lower bound for any encoding. The additional space used to support operators efficiently is called the \emph{redundancy} of the data structure. The following classifications of Data Structures are of particular interest:
 
 \begin{itemize}
-\item A \emph{Succinct Data Structure}~\cite{1989-FOCS-SpaceEfficientStaticTreesAndGraphs-Jacobson} is a data structure whose redundancy is asymptotically negligible when the size of the instance goes to infinity, that is, whose redundancy is within $o(\lg f(n))$.
+\item A \emph{Succinct Data Structure}~\cite{1989-FOCS-SpaceEfficientStaticTreesAndGraphs-Jacobson} is a data structure whose redundancy is negligible in comparison with the size of the data structure when the size of the instance goes to infinity, that is, whose redundancy is within $o(\lg f(n))$.
 \item A {\em Compressed Data Structure} (also called ``opportunistic data structure''~\cite{2004-Algoritmica-EngineeringAlightweightSuffixArrayConstructionAlgorithm-ManziniFerragina} or ``ultra-succinct data structure''~\cite{2007-SODA-UltraSuccinctRepresentationOfORderedTrees-JanssonSadakaneSung}) for a compressibility measure $\mu$ is a data structure that requires $\lg f(n,\mu) + o(\lg f(n))$ bits to encode any instance of size $n$ and compressibility $\mu$.
 \item A {\em Fully-Compressed Data Structure} for a compressibility measure $\mu$ is a data structure requiring $\lg f(n,\mu) + o(\lg f(n,\mu))$ bits on any instance of size $n$ and compressibility $\mu$. While the $o(\cdot)$ term is asymptotic in $n$, it is useful to allow $\mu$ to depend on $n$ too.
 \end{itemize}
@@ -512,7 +512,7 @@ P.~Afshani, J.~Barbay, and T.~M. Chan.
 %   Computer Science (FOCS)}, pages 129--138. IEEE Computer Society, 2009.
 
 \item
-J.~{Barbay}, C.~{Ochoa}, and S.~{Rao Satti}.
+J.~{Barbay}, C.~{Ochoa}, and S.~R.~{Satti}.
 \newblock {Synergistic Sorting and Deferred Data Structures on MultiSets}.
 \newblock In {\em Combinatorial Pattern Matching (CPM)}. SPRINGER, 2017.
 \newblock to appear.
@@ -608,10 +608,10 @@ Stefan Kratsch's main research area is parameterized complexity, which focuses o
   Computer Science (FOCS)}:450-459. IEEE Computer Society, 2012.
 \end{enumerate}
 
-\subsection*{Srinivasa Rao Sati}
+\subsection*{Srinivasa Rao Satti}
 
 \begin{multicols}{2}
-\noindent Srinivasa Rao Sati, Professor at Seoul National  University; \\
+\noindent Srinivasa Rao Satti, Professor at Seoul National  University; \\
 % \texttt{http://www.cs.helsinki.fi/u/gagie/}\\
 Email: \texttt{ssrao10@gmail.com} \\
 % Phone: XXX\\
@@ -661,7 +661,7 @@ COMPLETE Vita of Srinivasa.
 J\'er\'emy   & Barbay           & University of Chile                      & Chile       & jeremy@barbay.cl                   & Algo,Data &          & man   \\
 Johannes     & Fischer          & Dortmund University                      & Germany     & johannes.fischer@cs.tu-dortmund.de & Data      &          & man   \\
 Stefan       & Kratsch          & University of Bonn                       & Germany     & kratsch@cs.uni-bonn.de             & Algo      & 2010     & man   \\
-Srinivas     & Rao Sati         & Seoul University                         & Korea       &  ssrao10@gmail.com& Data      &          & man   \\
+Srinivas     & Rao Satti         & Seoul University                         & Korea       &  ssrao10@gmail.com& Data      &          & man   \\
 \midrule %SK: booktabs > standard tables
 Travis       & Gagie            & University of Helsinki                   & Finland     & travis.gagie@gmail.com             & Data      &          & man   \\
 Simon        & Gog              & Karlsruhe Institute of Technology        & Germany     & gog@kit.edu                        & Data      & 2011     & man   \\
