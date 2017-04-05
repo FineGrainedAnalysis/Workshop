@@ -252,7 +252,7 @@ The aim of the seminar is to gather two distinct communities: the one focusing o
 Traditionally the analysis of algorithms measures the complexity of a problem or of an algorithm in terms of the worst-case behavior over all inputs of a given size. \begin{LONG} This is the standard analysis of algorithms, pioneered by Knuth\cite{1968-BOOK-TheArtOfComputerProgramming-Knuth}, which measures the performance of the algorithm in the worst case over instances of fixed size. As the volume of data processed grows, the gap between the performance of the best algorithm "optimal in the worst case" and the best algorithm "in practice" grows as well, which reduce the interest of worst case theoretical analysis.
 
 \end{LONG}
-However, in certain cases, improved analysis and algorithms can be obtained by considering a finer partition of the input space.  This idea has been independently rediscovered in many areas, under the names of \emph{output-sensitive algorithms} (in \textsc{Computational Geometry}~\cite{1985-SOCG-OutputSizeSensitiveAlgorithmsForFindingMaximalVectors-KirkpatrickSeidel,1986-JCom-TheUltimatePlanarConvexHullAlgorithm-KirkpatrickSeidel}), \emph{parameterized complexity} (in \textsc{Computational Complexity}~\cite{CyganFKLMPPS15}), \emph{adaptive (analysis of) algorithms} (in \textsc{algorithmics}~\cite{1992-ACJ-AnOverviewOfAdaptiveSorting-MoffatPetersson}), \emph{instance-optimal algorithms} (in \textsc{Database}~\cite{2003-JCSS-OptimalAggregationAlgorithmsForMiddleWare-FaginLotemNaor} and \textsc{Computational Geometry}~\cite{2009-FOCS-InstanceOptimalGeometricAlgorithms-AfshaniBarbayChan}), or \emph{online competitive ratio} (in \textsc{algorithmics}~\cite{2007-SODA-OnTheSeparationAndEquivalenceOfPagingStrategies-AngelopoulosDorrigivLopezOrtiz}). 
+However, in certain cases, improved analysis and algorithms can be obtained by considering a finer partition of the input space.  This idea has been independently rediscovered in many areas, under the names of \emph{output-sensitive algorithms} (in \textsc{Computational Geometry}~\cite{1985-SOCG-OutputSizeSensitiveAlgorithmsForFindingMaximalVectors-KirkpatrickSeidel,1986-JCom-TheUltimatePlanarConvexHullAlgorithm-KirkpatrickSeidel}), \emph{parameterized complexity} (in \textsc{Computational Complexity}~\cite{CyganFKLMPPS15}), \emph{adaptive (analysis of) algorithms} (in \textsc{algorithmics}~\cite{1992-ACJ-AnOverviewOfAdaptiveSorting-MoffatPetersson}), \emph{instance-optimal algorithms} (in \textsc{Database}~\cite{2003-JCSS-OptimalAggregationAlgorithmsForMiddleWare-FaginLotemNaor} and \textsc{Computational Geometry}~\cite{2017-JACM-InstanceOptimalGeometricAlgorithms-AfshaniBarbayChan}), or \emph{online competitive ratio} (in \textsc{algorithmics}~\cite{2007-SODA-OnTheSeparationAndEquivalenceOfPagingStrategies-AngelopoulosDorrigivLopezOrtiz}). 
 %
 We list below a selection of the relevant techniques of analysis:
 
@@ -275,7 +275,7 @@ We list below a selection of the relevant techniques of analysis:
   \end{itemize}
   \end{LONG}
 
-\item \emph{Instance Optimality}: Fagin et al. \cite{2001-PDS-OptimalAggregationAlgorithmsForMiddleWare-FaginLotemNaor,2003-JCSS-OptimalAggregationAlgorithmsForMiddleWare-FaginLotemNaor} introduced the concept of an instance-optimal algorithm such that its cost is at most a constant factor from the cost of any other algorithm running on the same input, for every input instance.  For many problems, this requirement is too stringent, so Afshani\etal\cite{2009-FOCS-InstanceOptimalGeometricAlgorithms-AfshaniBarbayChan} considered instead variants of instance optimality on restricted models, limited to the structure of the instance as opposed to the order in which it is input.
+\item \emph{Instance Optimality}: Fagin et al. \cite{2001-PDS-OptimalAggregationAlgorithmsForMiddleWare-FaginLotemNaor,2003-JCSS-OptimalAggregationAlgorithmsForMiddleWare-FaginLotemNaor} introduced the concept of an instance-optimal algorithm such that its cost is at most a constant factor from the cost of any other algorithm running on the same input, for every input instance.  For many problems, this requirement is too stringent, so Afshani\etal\cite{2017-JACM-InstanceOptimalGeometricAlgorithms-AfshaniBarbayChan} considered instead variants of instance optimality on restricted models, limited to the structure of the instance as opposed to the order in which it is input.
 
   \end{itemize}
 
@@ -333,7 +333,7 @@ In many cases, the research on compressed data structures is orthogonal to the r
 \subsection{Objectives of the Seminar}
 \label{sec:objectives-seminar}
 
-The main objective of the seminar is to gather researchers who share the philosophy of going ``beyond the worst case'' but have applied it to distinct fields, such as polynomial or \NP-hard problems on one hand, and compressed data structures or indices on the other hand.  We describe three types of interactions (see Section~\ref{sec:synergies}) that we hope such a gathering will promote, and what impact it could have on the community in the long term  (Section~\ref{sec:impact}) in reducing the re-invention of techniques and identifying new problems.
+The main objective of the seminar is to gather researchers who share the philosophy of going ``beyond the worst case'' but have applied it to distinct fields, such as polynomial or \NP-hard problems on one hand, and compressed data structures or indices on the other hand.  We describe three types of interactions (see Section~\ref{sec:synergies}) that we hope such a gathering will promote, and what impact it could have on the community in the long term  (Section~\ref{sec:impact}) in reducing the re-invention of techniques and in identifying new problems.
 
 %\subsubsection{Synergies and Research Questions}
 \subsubsection{Synergies}
@@ -345,13 +345,13 @@ While sharing the same perspective of aiming ``beyond worst case analysis'', eac
 
 Some results from a given field can imply results in another field. 
 %
-For instance, the results on the compression of Wavelet Trees directly inspired an improved analysis of the running time of the \texttt{Adaptive Merge Sort} algorithm \cite{2013-TCS-CompressedRepresentationsOfPermutationsAndApplications-BarbayNavarro}.  
+For instance, the results on the compression of \texttt{Wavelet Trees} directly inspired an improved analysis of the running time of the \texttt{Adaptive Merge Sort} algorithm \cite{2013-TCS-CompressedRepresentationsOfPermutationsAndApplications-BarbayNavarro}.  
 %
 Researchers from different fields learning each other's techniques is likely to bring other such refinements.
 %
 For instance, faster algorithms can inspire compression schemes: any correct algorithm must be able to output a certificate of the correctness of its output for a given input. For some problems (e.g. \textsc{Sorting} a permutation), this certificate describes the instance itself. Then, an algorithm which performs faster on some classes of instances, generates a shorter certificate, which suggests a compressed representation of the input.
 % 
-Such relations could be exploited more often in the context of problems solvable in polynomial time, and does not seem to have been explored in the context of NP-hard problems.
+Such relations could be exploited more often in the context of problems solvable in polynomial time, and does not seem to have been explored in the context of NP-hard problems (e.g. compression of graphs based on the kernel identified in studies of the parameterized complexity of the decomposition of graphs into cliques).
 
 \paragraph{Methodology implied from other fields:}
 
@@ -361,7 +361,7 @@ For instance, the concept of entropy, well known in the field of compressed data
 %
 Researchers from different fields learning each other's methodologies is likely to bring other such refinements.
 %
-For instance, the study of ``Adaptive Sorting'' algorithms has introduced reductions between measures of disorder \cite{1992-ACJ-AnOverviewOfAdaptiveSorting-MoffatPetersson,1995-DAM-AFrameworkForAdaptiveSorting-PeterssonMoffat}, and the study of fixed-parameter tractable problems has introduced the more general \emph{parameterized reductions} between pairs formed by problems and measure~\cite{DowneyF13,CyganFKLMPPS15}. This latest methodology applied to adaptive sorting will bring a better understanding of the input order sensitivity of other problems. There is hope that it could also inspire the definition of such reductions between pairs formed by \textsc{Abstract Data Types} and measures of compressibility in the study of compressed data structures and of compressed indices.
+For instance, the study of ``Adaptive Sorting'' algorithms has introduced reductions between measures of disorder \cite{1992-ACJ-AnOverviewOfAdaptiveSorting-MoffatPetersson,1995-DAM-AFrameworkForAdaptiveSorting-PeterssonMoffat}, and the study of fixed-parameter tractable problems has introduced the more general \emph{parameterized reductions} between pairs formed by problems and measure~\cite{DowneyF13,CyganFKLMPPS15}. This latest methodology applied to adaptive sorting will bring a better understanding of the input order sensitivity of other problems. We predict that it will inspire the definition of such reductions between pairs formed by \textsc{Abstract Data Types} and measures of compressibility in the study of compressed data structures and of compressed indices.
 
 \paragraph{Tailored Problems:}
 
@@ -391,9 +391,8 @@ A better understanding of the applications of a specific algorithmic problem or 
 
 It is our hope that such a gathering of researchers from complementary fields of research will produce not only new scientific results in the short term, but also more coherent research in the future (i.e. avoiding to reinvent the same technique or result multiple times). We hope that this seminar will promote
 \begin{itemize}
-\item a compendium of analysis techniques for both algorithms and data structures; 
-\item a compendium of dual results between algorithms and data structures; and
-\item the constitution of a subgroup of researchers who wish to collaborate on a book about ``Adaptive Analysis Techniques and Results on Algorithms and Data Structures''.
+\item a compendium of  analysis techniques for both algorithms and data structures;  and
+\item a compendium of reductions and of dual results between algorithms and data structures.
 \end{itemize}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -497,7 +496,7 @@ J\'er\'emy Barbay received his PhD in Computer Science at the ``Laboratoire de R
 %
 J\'er\'emy Barbay's main research is about the analysis of algorithms and data-structures on finer classes of instances than those merely defined by their size, which yields the concepts of adaptive (analysis of) algorithms, instance optimality, output sensitive and parameterized complexity, compressed data structures and indexes, and of formal measures of compressibility.  His work has contributed, among others, to clarify the relations between those topics and has introduced a few useful concepts, such as the direct relation between permutation compression and adaptive sorting~\cite{2013-TCS-CompressedRepresentationsOfPermutationsAndApplications-BarbayNavarro};
 % the first compressed index achieving space within $o(n H_k) + O(n)$ instead of merely within $o(n \lg \sigma)$~\cite{2014-Algorithmica-EfficientFullyCompressedSequenceRepresentations-BarbayClaudeGagieNavarroNekrich} (in collaboration with Travis Gagie, co-author of this seminar proposal); Succinct Indexes~\cite{2011-TALG-SuccinctIndexesForStringsBinaryRelationsAndMultiLabeledTrees-BarbayHeMunroRao};
- and (input order oblivious) Instance Optimality in Computational Geometry \cite{2009-FOCS-InstanceOptimalGeometricAlgorithms-AfshaniBarbayChan}. 
+ and (input order oblivious) Instance Optimality in Computational Geometry \cite{2017-JACM-InstanceOptimalGeometricAlgorithms-AfshaniBarbayChan}. 
 
 \paragraph{Related publications:}
 \begin{enumerate}
