@@ -1,6 +1,5 @@
 Last Name;First Name;Affiliation;Country;Email;Junior;Female;Industrial;Homepage;Topic
 Barbay;Jeremy;University of Chile;Chile;jeremy@barbay.cl;;;;http://users.dcc.uchile.cl/~jbarbay/;Algo+Data 
-Gagie;Travis;University of Helsinki;Finland;travis.gagie@gmail.com;;;;http://www.cs.helsinki.fi/u/gagie/;Data      
 Gog;Simon;Karlsruhe Institute of Technology;Germany;gog@kit.edu;x;;;;Data      
 Kratsch;Stefan;University of Bonn;Germany;kratsch@cs.uni-bonn.de;;;;http://www.i1.informatik.uni-bonn.de/doku.php?id=staff:stefankratsch;Algo      
 Bannai;Hideo;Kyushu University;Japan;bannai@inf.kyushu-u.ac.jp;;;;http://www.i.kyushu-u.ac.jp/~bannai;Data      
@@ -14,16 +13,13 @@ Dell;Holger;Saarland University;Germany;hdell@mmci.uni-saarland.de;x;;;http://ww
 Dorrigiv;Reza;Dalhousie University;Canada;rdorrigiv@cs.dal.ca;;;;http://web.cs.dal.ca/~rdorrigiv/;Algo      
 Durocher;Stephane;University of Manitoba;Canada;durocher@cs.umanitoba.ca;;;;;Algo+Data 
 Elmasry;Amr;Alexandria University;Egypt;elmasry@alexu.edu.eg;;;;http://page.academia.edu/AmrElmasry;Data      
-Fischer;Johannes;Dortmund University;Germany;johannes.fischer@cs.tu-dortmund.de;;;;https://ls11-www.cs.uni-dortmund.de/staff/fischer;Data      
-Fontaine;Allyx;University of Bristol;England;allyx.fontaine@bristol.ac.uk;x;x;;;Algo      
-Gawrychowski;Pawel;University of Wrocław;Poland;gawry@cs.uni.wroc.pl;x;;;https://sites.google.com/a/cs.uni.wroc.pl/gawry;Data      
-Li Gortz;Inge;Technical University of Denmark;Denmark;inge@dtu.dk;;x;;http://www.imm.dtu.dk/~inge;Data      
+Fischer;Johannes;TU Dortmund;Germany;johannes.fischer@cs.tu-dortmund.de;;;;https://ls11-www.cs.uni-dortmund.de/staff/fischer;Data      
+Gortz;Inge Li;Technical University of Denmark;Denmark;inge@dtu.dk;;x;;http://www.imm.dtu.dk/~inge;Data      
 Grandoni;Fabrizio;Università della Svizzera italiana;Switzerland;fabrizio@idsia.ch;;;;http://people.idsia.ch/~grandoni/;Algo      
 Grohe;Martin;RWTH Aachen;Germany;grohe@informatik.rwth-aachen.de;;;;https://www.lii.rwth-aachen.de/~grohe;Algo      
 Hernandez;Cecilia;Universidad de Concepcion;Chile;chernand@gmail.com;x;x;;http://www.inf.udec.cl/~chernand;Algo+Data 
 Inenaga;Shunsuke;Kyushu University;Japan;inenaga@inf.kyushu-u.ac.jp;;;;http://str.i.kyushu-u.ac.jp/~inenaga;Data      
 Jansen;Bart M. P.;Eindhoven University of Technology;Netherlands;b.m.p.jansen@tue.nl;x;;;http://www.win.tue.nl/~bjansen/;Algo      
-Jez;Artur;Max-Planck-Institut fuer Informatik;Germany;aje@cs.uni.wroc.pl;;;;https://people.mpi-inf.mpg.de/~ajez/;Algo+Data 
 Kaski;Petteri;Aalto University;Finland;petteri.kaski@aalto.fi;;;;http://users.ics.aalto.fi/pkaski/;Algo      
 Kirkpatrick;David G.;University of British Columbia;Canada;kirk@cs.ubc.ca;;;;https://www.cs.ubc.ca/people/david-kirkpatrick;Algo      
 Klein;Rolf;University of Bonn;Germany;rolf.klein@uni-bonn.de;;;;http://tizian.cs.uni-bonn.de/staff/klein.html;Algo      
@@ -33,10 +29,8 @@ Ladra;Susana;Universidad de Corunia;Spain;sladra@udc.es;x;x;;http://lbd.udc.es/S
 Levcopoulos;Christos;Lund University;Sweden;christos@cs.lth.se;;;;;Algo      
 Lohrey;Markus;University of Siegen;Germany;lohrey@eti.uni-siegen.de;;;;http://www.eti.uni-siegen.de/ti/mitarbeiter/lohrey;Algo+Data 
 Lokshtanov;Daniel;University of Bergen;Norway;daniello@ii.uib.no;;;;http://www.ii.uib.no/~daniello/;Algo      
-Lopez Ortiz;Alejandro;University of Waterloo;Canada;alopez-o@uwaterloo.ca;;;;;Algo      
 Maneth;Sebastian;University of Edinburgh;England;smaneth@inf.ed.ac.uk;;;;http://homepages.inf.ed.ac.uk/smaneth;Data      
 Marx;Daniel;Hungarian Academy of Sciences;Hungary;dmarx@cs.bme.hu;;;;http://www.cs.bme.hu/~dmarx/;Algo      
-Mehlhorn;Kurt;Max-Planck-Institut fuer Informatik;Germany;mehlhorn@mpi-inf.mpg.de;;;;https://www.mpi-inf.mpg.de/~mehlhorn;Algo+Data 
 Misra;Neeldhara;IIT Gandhinagar;India;neeldhara.misra@gmail.com;x;x;;http://neeldhara.com/;Algo      
 Munro;J. Ian;University of Waterloo;Canada;imunro@uwaterloo.ca;;;;https://cs.uwaterloo.ca/~imunro;Algo+Data 
 Moffat;Alistair;University of Melbourne;Australia;ammoffat@unimelb.edu.au;;;;http://people.eng.unimelb.edu.au/ammoffat/;Data      
@@ -45,17 +39,27 @@ Nekrich;Yakov;University of Waterloo;Canada;ynekrich@uwaterloo.ca;;;;https://cs.
 Niedermeier;Rolf;TU Berlin;Germany;rolf.niedermeier@tu-berlin.de;;;;http://www.akt.tu-berlin.de/menue/team/niedermeier-rolf;Algo      
 Ochoa;Carlos;Universidad de Chile;Chile;cochoa@dcc.uchile.cl;x;;;;Algo      
 Okamato;Yoshio;The University of Electro-Communications;Japan;okamotoy@uec.ac.jp;;;;http://dopal.cs.uec.ac.jp/okamotoy/;Algo      
-Prezza;Nicola;University of Udine;Italy;prezza.nicola@spes.uniud.it;x;;;;Data      
+Prezza;Nicola;DTU Copenhagen;Denmark;npre@dtu.dk;x;;;https://users.dimi.uniud.it/~nicola.prezza/;Data      
 Puglisi;Simon;University of Helsinki;Finland;puglisi@cs.helsinki.fi;;;;http://www.cs.helsinki.fi/u/puglisi;Data      
 Raman;Rajeev;University of Leicester;England;r.raman@leicester.ac.uk;;;;http://www.cs.le.ac.uk/people/rraman;Data      
 Rojas;Javiel;Universidad de Chile;Chile;jrojas@dcc.uchile.cl;x;;;;Algo      
 Shchur;Vladimir;Wellcome Trust Sanger Institute;England;3@sanger.ac.uk;x;;;;Data      
 Seidel;Raimund;Saarland University;Germany;rseidel@cs.uni-saarland.de;;;;http://www-tcs.cs.uni-sb.de/;Algo      
 Siren;Jouni;Sanger Institute;England;jouni.siren@sanger.ac.uk;x;;;http://jltsiren.kapsi.fi;Data      
-Starikovskaya;Tatiana;University of Bristol;England;tat.starikovskaya@gmail.com;x;x;;http://starikovskaya.com;Algo+Data 
 Tarjan;Robert E.;Princeton University;USA;ret@cs.princeton.edu;;;;https://www.cs.princeton.edu/~ret/;Algo+Data 
 Thankachan;Sharma V.;Georgia Institute of Technology;USA;sharma.thankachan@gatech.edu;x;;;http://www.cc.gatech.edu/~sharma9/;Data      
 V. Williams;Virginia;Stanford;USA;virgi@cs.stanford.edu;;x;;http://theory.stanford.edu/~virgi/;Algo      
 Venturini;Rossano;University of Pisa;Italy;rossano.venturini@unipi.it;;;;http://zola.di.unipi.it/rossano/;Data      
 Vigna;Sebastiano;University of Milano;Italy;vigna@di.unimi.it;;;;http://vigna.di.unimi.it/;Data      
 Woeginger;Gerhard;Eindhoven University of Technology;Netherlands;g.woeginger@tue.nl;;;;http://www.win.tue.nl/~gwoegi/;Algo      
+Nicholson;Patrick;Bell Labs;Ireland;pat.nicholson@nokia-bell-labs.com;x;;x;https://www.bell-labs.com/usr/pat.nicholson;Data
+Köppl;Dominik;TU Dortmund;Germany;dominik.koeppl@udo.edu;x;;;https://ls11-www.cs.uni-dortmund.de/staff/koeppl;Data
+Kurpicz;Florian;TU Dortmund;Germany;florian.kurpicz@udo.edu;x;;;https://ls11-www.cs.uni-dortmund.de/staff/kurpicz;Data
+Hucke;Dany;University of Siegen;Germany;hucke@eti.uni-siegen.de;x;;;http://www.eti.uni-siegen.de/ti/mitarbeiter/hucke;Data
+XXX to be updated: XXX
+Gagie;Travis;University of Helsinki;Finland;travis.gagie@gmail.com;;;;http://www.cs.helsinki.fi/u/gagie/;Data      (now in Chile)
+Fontaine;Allyx;University of Bristol;England;allyx.fontaine@bristol.ac.uk;x;x;;;Algo      (now on an exotic island)
+Gawrychowski;Pawel;University of Wrocław;Poland;gawry@cs.uni.wroc.pl;x;;;https://sites.google.com/a/cs.uni.wroc.pl/gawry;Data      (now Haifa)
+Mehlhorn;Kurt;Max-Planck-Institut fuer Informatik;Germany;mehlhorn@mpi-inf.mpg.de;;;;https://www.mpi-inf.mpg.de/~mehlhorn;Algo+Data (retired?)
+Jez;Artur;University of Wrocław;Poland;aje@cs.uni.wroc.pl;;;;https://people.mpi-inf.mpg.de/~ajez/;Algo+Data (new homepage)
+Starikovskaya;Tatiana;University of Bristol;England;tat.starikovskaya@gmail.com;x;x;;http://starikovskaya.com;Algo+Data (now Paris)
