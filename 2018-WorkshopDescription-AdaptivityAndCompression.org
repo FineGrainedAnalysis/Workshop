@@ -1,0 +1,14 @@
+#+OPTIONS: ':nil *:t -:t ::t <:t H:3 \n:nil ^:t arch:headline author:t c:nil creator:comment d:(not "LOGBOOK") date:t e:t email:nil f:t inline:t num:t p:nil pri:nil prop:nil stat:t tags:t tasks:t tex:t timestamp:t toc:n todo:t |:t
+#+DESCRIPTION:
+#+KEYWORDS:
+#+LANGUAGE: en
+#+SELECT_TAGS: export
+#+EXCLUDE_TAGS: noexport
+#+CREATOR: Emacs 24.4.1 (Org mode 8.2.5h)
+#+TITLE: Dagstuhl Seminar 18281: \\ Synergies between \\ Adaptive Analysis of Algorithms,\\ Parameterized Complexity, \\ Compressed Data Structures \\ and Compressed Indices
+#+DESCRIPTION: , Schloss Dagstuhl, Wadern, Germany    Organizers: 
+#+DATE: July 8 – 13, 2018
+#+AUTHOR: Jérémy Barbay (University of Chile, CL); \\ Johannes Fischer (TU Dortmund, DE); \\ Stefan Kratsch (Universität Bonn, DE); \\ Srinivasa Rao Satti (Seoul National University, KR))
+#+EMAIL: jeremy@barbay.cl
+
+This seminar will bring together researchers from the area of the adaptive analysis of algorithms; the study of the parameterized complexity of NP Hard problems; the area focused on compressed data structures; and the area concerned with the study of compressed indices. While all of these subareas of algorithms and data structures, respectively, focus on ``going beyond the worst-case'' for classes of structurally restricted inputs, there has been a limited amount of interactions between them, and some results being "discovered" twice. The goal of the seminar is to foster this interaction both during the seminar and in the future by (1) teaching one another the key techniques of ones areas, through tutorials and short talks; (2) discussing open problems at the intersection of the areas in varying small groups; and (3) compiling those techniques and open problems in a collective document realized in collaboration between the participants.  Examples of synergies include (1) techniques developed for sorting multisets and used to design compressed data structures supporting operators on permutations; (2) techniques developed to study the Parameterized Complexity of some graph algorithms used to design compressed data structures for such graphs; (3) the use of difficulty measures such as the entropy for both running times and space usage; (4) techniques taking advantage at once of the input order, the input structure, the query order and the query structure; and others to be discovered during the seminar.
