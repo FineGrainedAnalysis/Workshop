@@ -4,7 +4,7 @@ Fischer;Johannes;TU Dortmund;DE;johannes.fischer@cs.tu-dortmund.de;;;;https://ls
 Kratsch;Stefan;University of Bonn;DE;kratsch@cs.uni-bonn.de;;;;http://www.i1.informatik.uni-bonn.de/doku.php?id=staff:stefankratsch;Algo;0
 Satti;Srinivasa Rao;Seoul National University;KR;ssrao10@gmail.com;;;;https://cse.snu.ac.kr/en/professor/srinivasa-rao-satti;Algo+Data;0
 Achlioptas;Dimitris;UC Santa Cruz;US;optas@cs.ucsc.edu;;;;https://users.soe.ucsc.edu/~optas/;Algo;1
-Beame;Paul;University of Washington;US;beame@cs.washington.edu;;;;http://www.cs.washington.edu/people/faculty/beame/;Algo,Data;1
+Beame;Paul;University of Washington;US;beame@cs.washington.edu;;;;http://www.cs.washington.edu/people/faculty/beame/;Algo+Data;1
 Chan;Timothy M.;University of Waterloo;CA;tmchan@cs.uwaterloo.ca;;;;;Algo;1
 Gagie;Travis;Diego Portales University;CL;travis.gagie@gmail.com;;;;;Data;1
 Gog;Simon;Karlsruhe Institute of Technology;DE;gog@kit.edu;x;;;;Data;1
@@ -33,12 +33,12 @@ Paturi;Ramamohan;University of California;US;paturi@cs.ucsd.edu;;;;https://csewe
 Prezza;Nicola;DTU Copenhagen;DK;npre@dtu.dk;x;;;https://users.dimi.uniud.it/~nicola.prezza/;Data;1
 Puglisi;Simon;University of Helsinki;FI;puglisi@cs.helsinki.fi;;;;http://www.cs.helsinki.fi/u/puglisi;Data;1
 Raman;Rajeev;University of Leicester;GB;r.raman@leicester.ac.uk;;;;http://www.cs.le.ac.uk/people/rraman;Data;1
-Raman;Venkatesh;Institute of Mathematical Sciences;IN;vraman@imsc.res.in;;;;http://www.imsc.res.in/~vraman/;Algo,Data;1
+Raman;Venkatesh;Institute of Mathematical Sciences;IN;vraman@imsc.res.in;;;;http://www.imsc.res.in/~vraman/;Algo+Data;1
 Rojas;Javiel;Universidad de Chile;CL;jrojas@dcc.uchile.cl;x;;;;Algo;1
 Seidel;Raimund;Saarland University;DE;rseidel@cs.uni-saarland.de;;;;http://www-tcs.cs.uni-sb.de/;Algo;1
 Shchur;Vladimir;Wellcome Trust Sanger Institute;GB;3@sanger.ac.uk;x;;;;Data;1
 Starikovskaya;Tatiana;Paris Diderot University;FR;tat.starikovskaya@gmail.com;x;x;;http://starikovskaya.com;Algo+Data;1
-Thorup;Mikkel;University of Copenhagen;DK;mikkel2thorup@gmail.com;;;;http://www.diku.dk/%7Emthorup/;Algo,Data;1
+Thorup;Mikkel;University of Copenhagen;DK;mikkel2thorup@gmail.com;;;;http://www.diku.dk/%7Emthorup/;Algo+Data;1
 V. Williams;Virginia;Stanford;US;virgi@cs.stanford.edu;;x;;http://theory.stanford.edu/~virgi/;Algo;1
 Venturini;Rossano;University of Pisa;IT;rossano.venturini@unipi.it;;;;http://zola.di.unipi.it/rossano/;Data;1
 Vigna;Sebastiano;University of Milano;IT;vigna@di.unimi.it;;;;http://vigna.di.unimi.it/;Data;1
