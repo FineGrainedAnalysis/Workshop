@@ -1,2 +1,10 @@
 # Workshop
 Worshop Proposal on Adaptive Analysis of Algorithms (in relation with other themes)
+
+
+* Description of files
+ 
+ - [[file:~/Unison/OnGoing/Dagstuhl-2018/Github/09-0617.ods]] :: guest list (file named as sent back by Dagstuhl's team and updated)
+ - [[file:~/Unison/OnGoing/Dagstuhl-2018/Github/18281.m.odt]] :: Motivation text (file named as sent back by Dagstuhl's team and updated)
+ - [[file:~/Unison/OnGoing/Dagstuhl-2018/Github/2017-WorkshopProposal-AdaptivityAndCompression.tex]] :: Proposal refused for 2017 in 2016
+ - [[file:~/Unison/OnGoing/Dagstuhl-2018/Github/2018-WorkshopDescription-AdaptivityAndCompression.tex]] :: Proposal accepted in 2017 for 2018 
